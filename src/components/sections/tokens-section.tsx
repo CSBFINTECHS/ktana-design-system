@@ -14,7 +14,7 @@ export function TokensSection() {
           {SPACING_SCALE.map((sp) => (
             <div key={sp.name} className="flex flex-col items-center gap-1">
               <div
-                className="rounded bg-brand-fire-500"
+                className="rounded bg-brand-500"
                 style={{ width: sp.value, height: sp.value }}
               />
               <span className="text-[10px] text-neutral-400">{sp.name}</span>
@@ -29,7 +29,7 @@ export function TokensSection() {
           {RADIUS_SCALE.map((r) => (
             <div key={r.name} className="flex flex-col items-center gap-2">
               <div
-                className="size-16 bg-brand-fire-500"
+                className="size-16 bg-brand-500"
                 style={{ borderRadius: r.value }}
               />
               <span className="text-[10px] text-neutral-400">{r.name}</span>
@@ -44,7 +44,7 @@ export function TokensSection() {
           {SHADOW_NAMES.map((s) => (
             <div key={s} className="flex flex-col items-center gap-2">
               <div
-                className="size-28 rounded-lg bg-neutral-800"
+                className="size-28 rounded-lg bg-neutral-900"
                 style={{ boxShadow: `var(--shadow-${s})` }}
               />
               <span className="text-xs text-neutral-400">{s}</span>

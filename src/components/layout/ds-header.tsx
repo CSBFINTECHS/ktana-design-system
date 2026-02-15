@@ -9,9 +9,11 @@ export function DSHeader() {
   const [activeSection, setActiveSection] = useState("logo");
 
   return (
-    <header className="sticky top-0 z-50 border-b border-neutral-800/60 bg-neutral-950/90 backdrop-blur-md">
+    <header
+      className="sticky top-0 z-50 border-b border-white/5 bg-black/80 backdrop-blur-xl"
+    >
       <div className="mx-auto flex max-w-[1400px] items-center justify-between px-8 py-3">
-        {/* Logo — wordmark KTANA real */}
+        {/* Logo — wordmark KTANA */}
         <Image
           src={assetUrl("/brand/nome/dark.svg")}
           alt="KTANA"
@@ -28,9 +30,9 @@ export function DSHeader() {
               key={item.id}
               href={`#${item.id}`}
               onClick={() => setActiveSection(item.id)}
-              className={`transition-colors hover:text-brand-fire-500 ${
+              className={`transition-colors hover:text-brand-500 ${
                 activeSection === item.id
-                  ? "text-brand-fire-500"
+                  ? "text-brand-500"
                   : "text-neutral-500"
               }`}
             >

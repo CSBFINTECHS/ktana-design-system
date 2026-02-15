@@ -6,28 +6,38 @@ export interface Gradient {
 
 export const GRADIENTS: Gradient[] = [
   {
+    name: "Noite Absoluta",
+    css: "linear-gradient(135deg, #000000 0%, #0F0F0F 50%, #141414 100%)",
+    description: "Fundo principal dark — preto puro para neutral-900",
+  },
+  {
     name: "Lama Negra",
-    css: "linear-gradient(135deg, #0D0D0D 0%, #303030 50%, #515151 100%)",
-    description: "neutral-950 → neutral-700 → neutral-600",
+    css: "linear-gradient(135deg, #0D0D0D 0%, #1A1A1A 50%, #303030 100%)",
+    description: "neutral-950 → neutral-800 → neutral-700",
   },
   {
-    name: "Fogo KTANA",
-    css: "linear-gradient(135deg, #CC2810 0%, #FF3317 50%, #FF5C3D 100%)",
-    description: "fire-600 → fire-500 → fire-400",
+    name: "Vermelho KTANA",
+    css: "linear-gradient(45deg, #73071F 0%, #C00C33 100%)",
+    description: "Brand 900 → 700 — gradiente escuro da marca",
   },
   {
-    name: "Espectro KTANA",
-    css: "conic-gradient(from 225deg, #FE006A 26%, #D300C5 52%, #FD4C2A 73%, #FFD100 100%)",
-    description: "magenta → purple → orange → gold",
+    name: "Vermelho Vibrante",
+    css: "linear-gradient(90deg, #E60F3D 0%, #F2365E 100%)",
+    description: "Brand 300 → 200 — gradiente vibrante para CTAs",
   },
   {
-    name: "Gelo Digital",
-    css: "linear-gradient(135deg, #3B7A9E 0%, #5DAAD6 50%, #9DCCEA 100%)",
-    description: "ice-700 → ice-500 → ice-300",
+    name: "Glow Vermelho",
+    css: "radial-gradient(circle at 50% 50%, rgba(194, 11, 52, 0.4) 0%, transparent 70%)",
+    description: "Radial glow vermelho para efeitos de iluminacao",
   },
   {
-    name: "Noite Samurai",
-    css: "linear-gradient(135deg, #000000 0%, #141414 50%, #303030 100%)",
-    description: "pure-black → neutral-900 → neutral-700",
+    name: "Borda Luminosa",
+    css: "linear-gradient(135deg, rgba(255,231,231,0.46) 0%, rgba(255,255,255,0.47) 7%, transparent 24%, rgba(255,255,255,0.3) 58%, #F2365E 81%, #FBC5D1 100%)",
+    description: "Stroke gradiente para cards glassmorphism",
+  },
+  {
+    name: "Divisor Rosa",
+    css: "linear-gradient(90deg, transparent 8%, #EF5B7C 50%, transparent 93%)",
+    description: "Linha divisora com glow rosa",
   },
 ];

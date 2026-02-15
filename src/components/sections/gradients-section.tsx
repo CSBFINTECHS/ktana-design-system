@@ -5,7 +5,7 @@ export function GradientsSection() {
   return (
     <section id="gradientes" className="mx-auto max-w-[1400px] px-8 py-20">
       <SectionLabel>GRADIENTES</SectionLabel>
-      <SectionTitle sub="5 gradientes nomeados do KIT Branding KTANA">
+      <SectionTitle sub="Gradientes nomeados do KIT Branding KTANA — preto, vermelho e efeitos de luz">
         Gradientes
       </SectionTitle>
       <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-3">

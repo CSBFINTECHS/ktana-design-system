@@ -49,17 +49,18 @@
   --color-sidebar-border: var(--sidebar-border);
   --color-sidebar-ring: var(--sidebar-ring);
 
-  /* Colors - KTANA brand extensions */
-  --color-fire: var(--fire);
-  --color-fire-foreground: var(--fire-foreground);
-  --color-spectrum-magenta: var(--spectrum-magenta);
-  --color-spectrum-purple: var(--spectrum-purple);
-  --color-spectrum-orange: var(--spectrum-orange);
-  --color-spectrum-gold: var(--spectrum-gold);
-  --color-ice: var(--ice);
-  --color-ice-foreground: var(--ice-foreground);
+  /* Colors - KTANA brand (vermelho — unica cor de destaque) */
+  --color-brand-100: var(--brand-100);
+  --color-brand-200: var(--brand-200);
+  --color-brand-300: var(--brand-300);
+  --color-brand-400: var(--brand-400);
+  --color-brand-500: var(--brand-500);
+  --color-brand-600: var(--brand-600);
+  --color-brand-700: var(--brand-700);
+  --color-brand-800: var(--brand-800);
+  --color-brand-900: var(--brand-900);
 
-  /* Colors - Primitive palette (for direct access) */
+  /* Colors - Primitive palette (neutrals) */
   --color-neutral-50: var(--neutral-50);
   --color-neutral-100: var(--neutral-100);
   --color-neutral-200: var(--neutral-200);
@@ -71,21 +72,8 @@
   --color-neutral-800: var(--neutral-800);
   --color-neutral-900: var(--neutral-900);
   --color-neutral-950: var(--neutral-950);
-  --color-brand-fire-100: var(--brand-fire-100);
-  --color-brand-fire-200: var(--brand-fire-200);
-  --color-brand-fire-300: var(--brand-fire-300);
-  --color-brand-fire-400: var(--brand-fire-400);
-  --color-brand-fire-500: var(--brand-fire-500);
-  --color-brand-fire-600: var(--brand-fire-600);
-  --color-brand-spectrum-magenta: var(--brand-spectrum-magenta);
-  --color-brand-spectrum-purple: var(--brand-spectrum-purple);
-  --color-brand-spectrum-orange: var(--brand-spectrum-orange);
-  --color-brand-spectrum-gold: var(--brand-spectrum-gold);
-  --color-brand-ice-300: var(--brand-ice-300);
-  --color-brand-ice-400: var(--brand-ice-400);
-  --color-brand-ice-500: var(--brand-ice-500);
-  --color-brand-ice-600: var(--brand-ice-600);
-  --color-brand-ice-700: var(--brand-ice-700);
+  --color-neutral-1000: var(--neutral-1000);
+  --color-neutral-pure: var(--neutral-pure);
 
   /* Fonts */
   --font-display: var(--font-family-display);

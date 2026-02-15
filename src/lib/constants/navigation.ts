@@ -10,4 +10,5 @@ export const DS_NAV_ITEMS: NavItem[] = [
   { id: "icones",     label: "Icones" },
   { id: "gradientes", label: "Gradientes" },
   { id: "tokens",     label: "Tokens" },
+  { id: "aplicacoes", label: "Aplicacoes" },
 ];
