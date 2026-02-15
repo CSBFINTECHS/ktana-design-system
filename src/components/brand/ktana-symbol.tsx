@@ -1,91 +1,310 @@
-interface KTANASymbolProps {
-  size?: number;
-  variant?: "dark" | "light";
-  className?: string;
-}
+import Image from "next/image";
+import { assetUrl } from "@/lib/utils";
 
-export function KTANASymbol({ size = 64, variant = "dark", className }: KTANASymbolProps) {
-  const fill = variant === "dark" ? "#FAF5EA" : "#141414";
+/* ─── Symbol (K geom) ─── */
+
+type BrandVariant = "dark" | "light";
+
+export function KTANASymbol({
+  variant = "dark",
+  size = 64,
+  className,
+}: {
+  variant?: BrandVariant;
+  size?: number;
+  className?: string;
+}) {
   return (
-    <svg
+    <Image
+      src={assetUrl(`/brand/symbol/${variant}.svg`)}
+      alt={`KTANA Symbol ${variant}`}
       width={size}
       height={size}
-      viewBox="0 0 100 100"
-      fill="none"
-      xmlns="http://www.w3.org/2000/svg"
       className={className}
-    >
-      <path
-        d="M50 5L90 27.5V72.5L50 95L10 72.5V27.5L50 5Z"
-        stroke={fill}
-        strokeWidth="3"
-      />
-      <path
-        d="M50 20L75 35V65L50 80L25 65V35L50 20Z"
-        fill={fill}
-      />
-      <path
-        d="M38 40L50 30L62 40V60L50 70L38 60V40Z"
-        fill={variant === "dark" ? "#0D0D0D" : "#FAF5EA"}
-      />
-    </svg>
+      unoptimized
+    />
   );
 }
 
-interface KTANALetteringProps {
-  height?: number;
-  variant?: "dark" | "light";
-  className?: string;
-}
+/* ─── Nome (wordmark KTANA) ─── */
 
-export function KTANALettering({ height = 32, variant = "dark", className }: KTANALetteringProps) {
-  const fill = variant === "dark" ? "#FAF5EA" : "#141414";
-  const width = height * 4.5;
+export function KTANANome({
+  variant = "dark",
+  height = 33,
+  className,
+}: {
+  variant?: BrandVariant;
+  height?: number;
+  className?: string;
+}) {
   return (
-    <svg
-      width={width}
+    <Image
+      src={assetUrl(`/brand/nome/${variant}.svg`)}
+      alt={`KTANA Nome ${variant}`}
+      width={Math.round(height * (173 / 33))}
       height={height}
-      viewBox="0 0 180 40"
-      fill="none"
-      xmlns="http://www.w3.org/2000/svg"
       className={className}
-    >
-      <text
-        x="0"
-        y="32"
-        fontFamily="'Zen Dots', cursive"
-        fontSize="36"
-        fontWeight="400"
-        fill={fill}
-        letterSpacing="2"
-      >
-        KTANA
-      </text>
-    </svg>
+      style={{ height, width: "auto" }}
+      unoptimized
+    />
   );
 }
 
-interface KTANALogotypeProps {
+/* ─── Slogan ─── */
+
+export function KTANASlogan({
+  variant = "dark",
+  height = 13,
+  className,
+}: {
+  variant?: BrandVariant;
   height?: number;
-  layout?: "horizontal" | "vertical";
-  variant?: "dark" | "light";
   className?: string;
+}) {
+  return (
+    <Image
+      src={assetUrl(`/brand/slogan/${variant}.svg`)}
+      alt={`KTANA Slogan ${variant}`}
+      width={Math.round(height * (173 / 13))}
+      height={height}
+      className={className}
+      style={{ height, width: "auto" }}
+      unoptimized
+    />
+  );
 }
 
-export function KTANALogotype({ height = 48, layout = "horizontal", variant = "dark", className }: KTANALogotypeProps) {
-  if (layout === "vertical") {
-    return (
-      <div className={`flex flex-col items-center gap-2 ${className ?? ""}`}>
-        <KTANASymbol size={height * 0.7} variant={variant} />
-        <KTANALettering height={height * 0.3} variant={variant} />
-      </div>
-    );
-  }
+/* ─── Nome + Slogan ─── */
 
+export function KTANANomeSlogan({
+  variant = "dark",
+  height = 56,
+  className,
+}: {
+  variant?: BrandVariant;
+  height?: number;
+  className?: string;
+}) {
   return (
-    <div className={`flex items-center gap-3 ${className ?? ""}`}>
-      <KTANASymbol size={height * 0.8} variant={variant} />
-      <KTANALettering height={height * 0.45} variant={variant} />
-    </div>
+    <Image
+      src={assetUrl(`/brand/nome-slogan/${variant}.svg`)}
+      alt={`KTANA Nome + Slogan ${variant}`}
+      width={Math.round(height * (173 / 56))}
+      height={height}
+      className={className}
+      style={{ height, width: "auto" }}
+      unoptimized
+    />
+  );
+}
+
+/* ─── Logo Horizontal (Symbol + Nome + Slogan) ─── */
+
+export function KTANALogoHorizontal({
+  variant = "dark",
+  height = 106,
+  className,
+}: {
+  variant?: BrandVariant;
+  height?: number;
+  className?: string;
+}) {
+  return (
+    <Image
+      src={assetUrl(`/brand/logo-horizontal/${variant}.svg`)}
+      alt={`KTANA Logo Horizontal ${variant}`}
+      width={Math.round(height * (301 / 106))}
+      height={height}
+      className={className}
+      style={{ height, width: "auto" }}
+      unoptimized
+    />
+  );
+}
+
+/* ─── Logo Vertical ─── */
+
+export function KTANALogoVertical({
+  variant = "dark",
+  height = 149,
+  className,
+}: {
+  variant?: BrandVariant;
+  height?: number;
+  className?: string;
+}) {
+  return (
+    <Image
+      src={assetUrl(`/brand/logo-vertical/${variant}.svg`)}
+      alt={`KTANA Logo Vertical ${variant}`}
+      width={Math.round(height * (101 / 149))}
+      height={height}
+      className={className}
+      style={{ height, width: "auto" }}
+      unoptimized
+    />
+  );
+}
+
+/* ─── Logo Extendido ─── */
+
+export function KTANALogoExtendido({
+  variant = "dark",
+  height = 81,
+  className,
+}: {
+  variant?: BrandVariant;
+  height?: number;
+  className?: string;
+}) {
+  return (
+    <Image
+      src={assetUrl(`/brand/logo-extendido/${variant}.svg`)}
+      alt={`KTANA Logo Extendido ${variant}`}
+      width={Math.round(height * (428 / 81))}
+      height={height}
+      className={className}
+      style={{ height, width: "auto" }}
+      unoptimized
+    />
+  );
+}
+
+/* ─── Logo Reduzido ─── */
+
+export function KTANALogoReduzido({
+  variant = "dark",
+  size = 100,
+  className,
+}: {
+  variant?: BrandVariant;
+  size?: number;
+  className?: string;
+}) {
+  return (
+    <Image
+      src={assetUrl(`/brand/logo-reduzido/${variant}.svg`)}
+      alt={`KTANA Logo Reduzido ${variant}`}
+      width={size}
+      height={size}
+      className={className}
+      unoptimized
+    />
+  );
+}
+
+/* ─── Foto de Perfil ─── */
+
+export function KTANAFotoPerfil({
+  variant = "dark",
+  size = 262,
+  className,
+}: {
+  variant?: BrandVariant;
+  size?: number;
+  className?: string;
+}) {
+  return (
+    <Image
+      src={assetUrl(`/brand/foto-perfil/${variant}.png`)}
+      alt={`KTANA Foto de Perfil ${variant}`}
+      width={size}
+      height={size}
+      className={className}
+      unoptimized
+    />
+  );
+}
+
+/* ─── Usuario ─── */
+
+export function KTANAUsuario({
+  variant = "dark",
+  height = 112,
+  className,
+}: {
+  variant?: BrandVariant;
+  height?: number;
+  className?: string;
+}) {
+  const ratio = variant === "dark" ? 308 / 112 : 288 / 93;
+  return (
+    <Image
+      src={assetUrl(`/brand/usuario/${variant}.svg`)}
+      alt={`KTANA Usuario ${variant}`}
+      width={Math.round(height * ratio)}
+      height={height}
+      className={className}
+      style={{ height, width: "auto" }}
+      unoptimized
+    />
+  );
+}
+
+/* ─── Samurai Character ─── */
+
+export function KTANASamurai({
+  height = 400,
+  className,
+}: {
+  height?: number;
+  className?: string;
+}) {
+  return (
+    <Image
+      src={assetUrl("/brand/character/samurai.png")}
+      alt="KTANA Samurai Character"
+      width={Math.round(height * (948 / 1128))}
+      height={height}
+      className={className}
+      style={{ height, width: "auto" }}
+      unoptimized
+    />
+  );
+}
+
+/* ─── Samurai Principal (wide composition) ─── */
+
+export function KTANASamuraiPrincipal({
+  height = 400,
+  className,
+}: {
+  height?: number;
+  className?: string;
+}) {
+  return (
+    <Image
+      src={assetUrl("/brand/character/samurai-principal.png")}
+      alt="KTANA - Embrace The Future"
+      width={Math.round(height * (5120 / 1896))}
+      height={height}
+      className={className}
+      style={{ height, width: "auto" }}
+      unoptimized
+    />
+  );
+}
+
+/* ─── Variacoes (grid de todas as variantes) ─── */
+
+export function KTANAVariacoes({
+  variant = "dark",
+  height = 200,
+  className,
+}: {
+  variant?: BrandVariant;
+  height?: number;
+  className?: string;
+}) {
+  return (
+    <Image
+      src={assetUrl(`/brand/z-variacoes/${variant}.svg`)}
+      alt={`KTANA Variacoes ${variant}`}
+      width={Math.round(height * (1968 / 396))}
+      height={height}
+      className={className}
+      style={{ height, width: "auto" }}
+      unoptimized
+    />
   );
 }

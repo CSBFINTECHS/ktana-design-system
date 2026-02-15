@@ -1,19 +1,29 @@
-import { KTANALogotype } from "@/components/brand/ktana-symbol";
+import Image from "next/image";
+import { assetUrl } from "@/lib/utils";
 
 export function DSFooter() {
   return (
-    <footer className="border-t border-neutral-800 bg-neutral-950">
+    <footer className="border-t border-neutral-800/60 bg-neutral-950">
       <div className="mx-auto max-w-[1400px] px-8 py-16">
         <div className="grid grid-cols-1 gap-12 md:grid-cols-3">
+          {/* Coluna 1 — Logo + descrição */}
           <div>
-            <KTANALogotype layout="horizontal" variant="dark" height={32} />
+            <Image
+              src={assetUrl("/brand/logo-horizontal/dark.svg")}
+              alt="KTANA"
+              width={180}
+              height={64}
+              className="h-12 w-auto"
+              unoptimized
+            />
             <p className="mt-4 text-sm leading-relaxed text-neutral-500">
               Estrategia digital com precisao de lamina — tecnologia, performance e design.
             </p>
           </div>
 
+          {/* Coluna 2 — Navegação */}
           <div>
-            <p className="mb-4 text-xs font-semibold uppercase tracking-[0.15em] text-brand-fire-400">
+            <p className="mb-4 text-xs font-semibold uppercase tracking-[0.15em] text-brand-fire-500">
               Design System
             </p>
             <ul className="space-y-2 text-sm text-neutral-500">
@@ -26,8 +36,9 @@ export function DSFooter() {
             </ul>
           </div>
 
+          {/* Coluna 3 — Stack */}
           <div>
-            <p className="mb-4 text-xs font-semibold uppercase tracking-[0.15em] text-brand-fire-400">
+            <p className="mb-4 text-xs font-semibold uppercase tracking-[0.15em] text-brand-fire-500">
               Stack
             </p>
             <ul className="space-y-2 text-sm text-neutral-500">
@@ -47,11 +58,9 @@ export function DSFooter() {
           <p className="text-xs text-neutral-600">
             &copy; 2026 KTANA. Todos os direitos reservados.
           </p>
-          <div className="flex items-center gap-2">
-            <span className="font-display text-[9px] font-semibold uppercase tracking-[0.2em] text-neutral-600">
-              Corte Preciso
-            </span>
-          </div>
+          <p className="text-[10px] uppercase tracking-[0.2em] text-neutral-600">
+            Embrace The Future
+          </p>
         </div>
       </div>
     </footer>
