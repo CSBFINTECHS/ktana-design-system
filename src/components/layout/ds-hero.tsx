@@ -23,18 +23,27 @@ export function DSHero() {
         style={{ backgroundImage: `url(${assetUrl("/brand/grafismo/lines-bg.png")})` }}
       />
 
-      {/* ── Glow vermelho sutil ── */}
+      {/* ── Fade vermelho no topo (como na LP) ── */}
       <div
         className="absolute inset-0"
         style={{
           background:
-            "radial-gradient(ellipse 60% 60% at 60% 50%, rgba(215, 0, 48, 0.12) 0%, transparent 70%)",
+            "radial-gradient(ellipse 80% 50% at 60% 0%, rgba(215, 0, 48, 0.25) 0%, transparent 60%)",
+        }}
+      />
+
+      {/* ── Glow vermelho na personagem ── */}
+      <div
+        className="absolute inset-0"
+        style={{
+          background:
+            "radial-gradient(ellipse 50% 60% at 65% 50%, rgba(215, 0, 48, 0.15) 0%, transparent 70%)",
         }}
       />
 
       {/* ── Gradientes de profundidade (esquerda escura para legibilidade) ── */}
       <div className="absolute inset-0 bg-gradient-to-r from-black via-black/70 to-black/20 lg:via-black/50 lg:to-transparent" />
-      <div className="absolute inset-0 bg-gradient-to-b from-black/50 via-transparent to-black" />
+      <div className="absolute inset-0 bg-gradient-to-b from-black/30 via-transparent to-black" />
 
       {/* ══════ Conteúdo ══════ */}
       <div className="relative z-10 mx-auto flex w-full max-w-[1400px] flex-1 items-center px-8 py-32 lg:py-0">
