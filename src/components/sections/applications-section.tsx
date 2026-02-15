@@ -267,14 +267,14 @@ export function ApplicationsSection() {
       {/* ══ Backgrounds — Landing Page ══ */}
       <SubSection title="Backgrounds — Landing Page">
         <p className="mb-6 text-sm text-neutral-400">
-          Composicoes da LP oficial com personagem AI robotica — linguagem visual dark + vermelho.
+          Todas as composicoes da LP oficial com personagem AI — linguagem visual dark + vermelho + cyberpunk.
         </p>
 
         {/* Hero Banner — full width */}
         <div className="overflow-hidden rounded-xl border border-white/5 bg-black">
           <Image
             src={assetUrl("/brand/bg/hero-banner.png")}
-            alt="Hero Banner — LP Personagem AI"
+            alt="Hero — Personagem AI"
             width={3380}
             height={1800}
             className="w-full"
@@ -282,68 +282,88 @@ export function ApplicationsSection() {
             unoptimized
           />
           <div className="bg-neutral-900 px-4 py-3">
-            <p className="text-sm font-medium text-neutral-200">Hero — Personagem AI com energia vermelha</p>
-            <p className="mt-1 text-xs text-neutral-500">3380 × 1800px — Background principal da Landing Page</p>
+            <p className="text-sm font-medium text-neutral-200">Hero — Inteligencia Artificial & Ciencia de Dados</p>
           </div>
         </div>
 
-        {/* Banner Section 2 */}
-        <div className="mt-4 overflow-hidden rounded-xl border border-white/5 bg-black">
-          <Image
-            src={assetUrl("/brand/bg/banner-section2.png")}
-            alt="Section 2 — LP"
-            width={3924}
-            height={1800}
-            className="w-full"
-            style={{ width: "100%", height: "auto" }}
-            unoptimized
-          />
-          <div className="bg-neutral-900 px-4 py-3">
-            <p className="text-sm font-medium text-neutral-200">Section 2 — Personagem com veu vermelho</p>
-            <p className="mt-1 text-xs text-neutral-500">3924 × 1800px — Variacao artistica da LP</p>
-          </div>
-        </div>
-
-        {/* Cyberpunk portrait */}
+        {/* Grid 2 cols: Section 2 + Grow as a Service */}
         <div className="mt-4 grid gap-4 md:grid-cols-2">
           <div className="overflow-hidden rounded-xl border border-white/5 bg-black">
-            <div className="aspect-video overflow-hidden">
-              <Image
-                src={assetUrl("/brand/character/ktana-cyberpunk.jpg")}
-                alt="KTANA Cyberpunk — Retrato AI"
-                width={1600}
-                height={1600}
-                className="h-full w-full object-cover"
-                unoptimized
-              />
-            </div>
+            <Image
+              src={assetUrl("/brand/bg/banner-section2.png")}
+              alt="Futuro Agora — Personagem com veu"
+              width={3924}
+              height={1800}
+              className="w-full"
+              style={{ width: "100%", height: "auto" }}
+              unoptimized
+            />
             <div className="bg-neutral-900 px-4 py-3">
-              <p className="text-xs font-medium text-neutral-300">Cyberpunk — Retrato AI close-up</p>
+              <p className="text-xs font-medium text-neutral-300">O Futuro e Agora — Personagem com veu vermelho</p>
             </div>
           </div>
-          <div className="flex flex-col gap-4">
-            <div className="flex-1 overflow-hidden rounded-xl border border-white/5 bg-neutral-900 p-6">
-              <p className="mb-2 text-xs font-semibold uppercase tracking-[0.15em] text-brand-500">Linguagem Visual LP</p>
-              <p className="text-sm leading-relaxed text-neutral-400">
-                A Landing Page utiliza composicoes com personagem AI robotica
-                em estilo dark futurista — diferente do samurai do KIT Branding.
-                Efeitos de energia vermelha, iluminacao dramatica e estetica cyberpunk.
-              </p>
-              <div className="mt-4 space-y-2">
-                <div className="flex items-center gap-2">
-                  <div className="h-3 w-3 rounded-full bg-[#D70030]" />
-                  <span className="text-xs text-neutral-500">Energia vermelha</span>
-                </div>
-                <div className="flex items-center gap-2">
-                  <div className="h-3 w-3 rounded-full bg-black border border-neutral-700" />
-                  <span className="text-xs text-neutral-500">Dark absoluto</span>
-                </div>
-                <div className="flex items-center gap-2">
-                  <div className="h-3 w-3 rounded-full bg-[#5DAAD6]" />
-                  <span className="text-xs text-neutral-500">Acentos azul gelo</span>
-                </div>
-              </div>
+          <div className="overflow-hidden rounded-xl border border-white/5 bg-black">
+            <Image
+              src={assetUrl("/brand/bg/banner-grow-as-service.png")}
+              alt="Grow As A Service — Silhueta digital"
+              width={3468}
+              height={2166}
+              className="w-full"
+              style={{ width: "100%", height: "auto" }}
+              unoptimized
+            />
+            <div className="bg-neutral-900 px-4 py-3">
+              <p className="text-xs font-medium text-neutral-300">Grow As A Service — Dados O Novo Petroleo</p>
             </div>
+          </div>
+        </div>
+
+        {/* Grid 2 cols: Gestao Japonesa + Software Melhor */}
+        <div className="mt-4 grid gap-4 md:grid-cols-2">
+          <div className="overflow-hidden rounded-xl border border-white/5 bg-black">
+            <Image
+              src={assetUrl("/brand/bg/banner-gestao-japonesa.png")}
+              alt="Formato Japones de Gestao Tecnologica"
+              width={1436}
+              height={769}
+              className="w-full"
+              style={{ width: "100%", height: "auto" }}
+              unoptimized
+            />
+            <div className="bg-neutral-900 px-4 py-3">
+              <p className="text-xs font-medium text-neutral-300">Formato Japones de Gestao Tecnologica</p>
+            </div>
+          </div>
+          <div className="overflow-hidden rounded-xl border border-white/5 bg-black">
+            <Image
+              src={assetUrl("/brand/bg/banner-software-melhor.png")}
+              alt="Seu Software Melhor do que Voce Imaginou"
+              width={3468}
+              height={2166}
+              className="w-full"
+              style={{ width: "100%", height: "auto" }}
+              unoptimized
+            />
+            <div className="bg-neutral-900 px-4 py-3">
+              <p className="text-xs font-medium text-neutral-300">Seu Software Melhor do que Voce Imaginou</p>
+            </div>
+          </div>
+        </div>
+
+        {/* Cyberpunk portrait — foto do usuario */}
+        <div className="mt-4 overflow-hidden rounded-xl border border-white/5 bg-black">
+          <div className="aspect-[21/9] overflow-hidden">
+            <Image
+              src={assetUrl("/brand/character/ktana-cyberpunk.jpg")}
+              alt="KTANA Cyberpunk — Retrato AI"
+              width={1600}
+              height={1600}
+              className="h-full w-full object-cover object-top"
+              unoptimized
+            />
+          </div>
+          <div className="bg-neutral-900 px-4 py-3">
+            <p className="text-xs font-medium text-neutral-300">Cyberpunk — Retrato AI close-up</p>
           </div>
         </div>
       </SubSection>
