@@ -277,50 +277,23 @@ export function LogoSection() {
           />
         </div>
         <div className="mt-4 grid grid-cols-2 gap-4 md:grid-cols-4">
-          <div className="overflow-hidden rounded-xl bg-neutral-900">
-            <Image
-              src={assetUrl("/brand/character/samurai-neon.png")}
-              alt="Samurai Neon"
-              width={948}
-              height={1128}
-              className="w-full"
-              style={{ width: "100%", height: "auto" }}
-              unoptimized
-            />
-          </div>
-          <div className="overflow-hidden rounded-xl bg-neutral-900">
-            <Image
-              src={assetUrl("/brand/character/samurai-main.png")}
-              alt="Samurai Main"
-              width={948}
-              height={1128}
-              className="w-full"
-              style={{ width: "100%", height: "auto" }}
-              unoptimized
-            />
-          </div>
-          <div className="overflow-hidden rounded-xl bg-neutral-900">
-            <Image
-              src={assetUrl("/brand/character/samurai-holographic.png")}
-              alt="Samurai Holographic"
-              width={948}
-              height={1128}
-              className="w-full"
-              style={{ width: "100%", height: "auto" }}
-              unoptimized
-            />
-          </div>
-          <div className="overflow-hidden rounded-xl bg-neutral-900">
-            <Image
-              src={assetUrl("/brand/character/ktana-cyberpunk.jpg")}
-              alt="KTANA Cyberpunk"
-              width={1600}
-              height={1600}
-              className="w-full"
-              style={{ width: "100%", height: "auto" }}
-              unoptimized
-            />
-          </div>
+          {[
+            { src: "/brand/character/samurai-neon.png", alt: "Samurai Neon", w: 948, h: 1128 },
+            { src: "/brand/character/samurai-main.png", alt: "Samurai Main", w: 948, h: 1128 },
+            { src: "/brand/character/samurai-holographic.png", alt: "Samurai Holographic", w: 948, h: 1128 },
+            { src: "/brand/character/ktana-cyberpunk.jpg", alt: "KTANA Cyberpunk", w: 1600, h: 1600 },
+          ].map((img) => (
+            <div key={img.alt} className="aspect-[3/4] overflow-hidden rounded-xl bg-neutral-900">
+              <Image
+                src={assetUrl(img.src)}
+                alt={img.alt}
+                width={img.w}
+                height={img.h}
+                className="h-full w-full object-cover object-top"
+                unoptimized
+              />
+            </div>
+          ))}
         </div>
       </SubSection>
 

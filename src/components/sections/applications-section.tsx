@@ -40,14 +40,13 @@ export function ApplicationsSection() {
       {/* ══ Estilo Fotográfico — Renders 3D da Personagem ══ */}
       <SubSection title="Estilo Fotografico — Personagem 3D">
         <p className="mb-8 text-sm text-neutral-400">
-          Renders AI da personagem samurai — mascote oficial da marca KTANA. Cada variante
-          explora um estilo visual diferente mantendo a identidade dark + vermelho.
+          Variantes oficiais do mascote KTANA — identidade dark + vermelho.
         </p>
-        <div className="grid grid-cols-2 gap-4 md:grid-cols-3">
+        <div className="grid grid-cols-2 gap-4 md:grid-cols-3 lg:grid-cols-4">
           {CHARACTER_RENDERS.map((render) => (
-            <div key={render.label} className="group relative overflow-hidden rounded-xl bg-neutral-900">
+            <div key={render.label} className="group relative aspect-[3/4] overflow-hidden rounded-xl bg-neutral-900">
               <div
-                className="absolute inset-0 opacity-0 transition-opacity duration-300 group-hover:opacity-100"
+                className="absolute inset-0 z-[5] opacity-0 transition-opacity duration-300 group-hover:opacity-100"
                 style={{
                   background:
                     "radial-gradient(ellipse at 50% 70%, rgba(215, 0, 48, 0.15) 0%, transparent 70%)",
@@ -58,8 +57,7 @@ export function ApplicationsSection() {
                 alt={`KTANA Samurai — ${render.label}`}
                 width={render.w}
                 height={render.h}
-                className="relative z-10 w-full transition-transform duration-500 group-hover:scale-[1.03]"
-                style={{ width: "100%", height: "auto" }}
+                className="relative z-10 h-full w-full object-cover object-top transition-transform duration-500 group-hover:scale-[1.03]"
                 unoptimized
               />
               <div className="absolute bottom-0 left-0 right-0 z-20 bg-gradient-to-t from-black/80 to-transparent px-4 pb-3 pt-8">
