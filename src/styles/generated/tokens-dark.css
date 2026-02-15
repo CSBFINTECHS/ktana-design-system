@@ -1,0 +1,46 @@
+/**
+ * Do not edit directly, this file was auto-generated.
+ */
+
+.dark {
+  --background: #0D0D0D;
+  --foreground: #FAF5EA;
+  --card: #141414;
+  --card-foreground: #FAF5EA;
+  --popover: #141414;
+  --popover-foreground: #FAF5EA;
+  --primary: #FF3317;
+  --primary-foreground: #FAF5EA;
+  --secondary: #303030;
+  --secondary-foreground: #FAF5EA;
+  --muted: #1A1A1A;
+  --muted-foreground: #575757;
+  --accent: #FFD100;
+  --accent-foreground: #0D0D0D;
+  --destructive: #EF4444;
+  --destructive-foreground: #FAF5EA;
+  --border: #303030;
+  --input: #303030;
+  --ring: #FF3317;
+  --chart-1: #FF3317;
+  --chart-2: #5DAAD6;
+  --chart-3: #FFD100;
+  --chart-4: #818E8C;
+  --chart-5: #FE006A;
+  --fire: #FF3317;
+  --fire-foreground: #FAF5EA;
+  --spectrum-magenta: #FE006A;
+  --spectrum-purple: #D300C5;
+  --spectrum-orange: #FD4C2A;
+  --spectrum-gold: #FFD100;
+  --ice: #5DAAD6;
+  --ice-foreground: #0D0D0D;
+  --sidebar-background: #0D0D0D;
+  --sidebar-foreground: #FAF5EA;
+  --sidebar-primary: #FF3317;
+  --sidebar-primary-foreground: #FAF5EA;
+  --sidebar-accent: #FFD100;
+  --sidebar-accent-foreground: #0D0D0D;
+  --sidebar-border: #303030;
+  --sidebar-ring: #FF3317;
+}

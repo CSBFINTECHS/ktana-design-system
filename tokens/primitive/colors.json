@@ -1,0 +1,51 @@
+{
+  "neutral": {
+    "50":  { "$value": "#FAF5EA", "$type": "color" },
+    "100": { "$value": "#FFFEF7", "$type": "color" },
+    "200": { "$value": "#F0F0F0", "$type": "color" },
+    "300": { "$value": "#D0D5D7", "$type": "color" },
+    "400": { "$value": "#818E8C", "$type": "color" },
+    "500": { "$value": "#575757", "$type": "color" },
+    "600": { "$value": "#515151", "$type": "color" },
+    "700": { "$value": "#303030", "$type": "color" },
+    "800": { "$value": "#1A1A1A", "$type": "color" },
+    "900": { "$value": "#141414", "$type": "color" },
+    "950": { "$value": "#0D0D0D", "$type": "color" }
+  },
+  "brand-fire": {
+    "600": { "$value": "#CC2810", "$type": "color" },
+    "500": { "$value": "#FF3317", "$type": "color" },
+    "400": { "$value": "#FF5C3D", "$type": "color" },
+    "300": { "$value": "#FF8566", "$type": "color" },
+    "200": { "$value": "#FFAD8F", "$type": "color" },
+    "100": { "$value": "#FFD6BF", "$type": "color" }
+  },
+  "brand-spectrum": {
+    "magenta": { "$value": "#FE006A", "$type": "color" },
+    "purple":  { "$value": "#D300C5", "$type": "color" },
+    "orange":  { "$value": "#FD4C2A", "$type": "color" },
+    "gold":    { "$value": "#FFD100", "$type": "color" }
+  },
+  "brand-ice": {
+    "700": { "$value": "#3B7A9E", "$type": "color" },
+    "600": { "$value": "#4A91B8", "$type": "color" },
+    "500": { "$value": "#5DAAD6", "$type": "color" },
+    "400": { "$value": "#7DBBE0", "$type": "color" },
+    "300": { "$value": "#9DCCEA", "$type": "color" }
+  },
+  "destructive": {
+    "500": { "$value": "#EF4444", "$type": "color" },
+    "600": { "$value": "#DC2626", "$type": "color" }
+  },
+  "success": {
+    "500": { "$value": "#22C55E", "$type": "color" },
+    "600": { "$value": "#16A34A", "$type": "color" }
+  },
+  "warning": {
+    "500": { "$value": "#F59E0B", "$type": "color" },
+    "600": { "$value": "#D97706", "$type": "color" }
+  },
+  "neon-green": {
+    "500": { "$value": "#05FF00", "$type": "color" }
+  }
+}

@@ -1,0 +1,26 @@
+[
+  {
+    "name": "light",
+    "selectedTokenSets": {
+      "primitive/colors": "source",
+      "primitive/typography": "source",
+      "primitive/spacing": "source",
+      "primitive/radius": "source",
+      "primitive/shadows": "source",
+      "semantic/colors-light": "enabled",
+      "semantic/typography": "enabled"
+    }
+  },
+  {
+    "name": "dark",
+    "selectedTokenSets": {
+      "primitive/colors": "source",
+      "primitive/typography": "source",
+      "primitive/spacing": "source",
+      "primitive/radius": "source",
+      "primitive/shadows": "source",
+      "semantic/colors-dark": "enabled",
+      "semantic/typography": "enabled"
+    }
+  }
+]

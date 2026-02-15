@@ -1,0 +1,134 @@
+{
+  "typography": {
+    "display-hero": {
+      "$value": {
+        "fontFamily": "{font-family.display}",
+        "fontWeight": "{font-weight.regular}",
+        "fontSize": "{font-size.hero}",
+        "lineHeight": "{line-height.none}",
+        "letterSpacing": "{letter-spacing.normal}"
+      },
+      "$type": "typography"
+    },
+    "display-xl": {
+      "$value": {
+        "fontFamily": "{font-family.display}",
+        "fontWeight": "{font-weight.regular}",
+        "fontSize": "{font-size.xl5}",
+        "lineHeight": "{line-height.none}",
+        "letterSpacing": "{letter-spacing.normal}"
+      },
+      "$type": "typography"
+    },
+    "display-large": {
+      "$value": {
+        "fontFamily": "{font-family.display}",
+        "fontWeight": "{font-weight.regular}",
+        "fontSize": "{font-size.xl4}",
+        "lineHeight": "{line-height.none}",
+        "letterSpacing": "{letter-spacing.normal}"
+      },
+      "$type": "typography"
+    },
+    "display-medium": {
+      "$value": {
+        "fontFamily": "{font-family.display}",
+        "fontWeight": "{font-weight.regular}",
+        "fontSize": "{font-size.xl3}",
+        "lineHeight": "{line-height.tight}",
+        "letterSpacing": "{letter-spacing.normal}"
+      },
+      "$type": "typography"
+    },
+    "heading-xl": {
+      "$value": {
+        "fontFamily": "{font-family.display}",
+        "fontWeight": "{font-weight.regular}",
+        "fontSize": "{font-size.xl2}",
+        "lineHeight": "{line-height.snug}",
+        "letterSpacing": "{letter-spacing.normal}"
+      },
+      "$type": "typography"
+    },
+    "heading-large": {
+      "$value": {
+        "fontFamily": "{font-family.display}",
+        "fontWeight": "{font-weight.regular}",
+        "fontSize": "{font-size.xl}",
+        "lineHeight": "{line-height.normal}",
+        "letterSpacing": "{letter-spacing.normal}"
+      },
+      "$type": "typography"
+    },
+    "heading-medium": {
+      "$value": {
+        "fontFamily": "{font-family.display}",
+        "fontWeight": "{font-weight.regular}",
+        "fontSize": "{font-size.lg}",
+        "lineHeight": "{line-height.normal}",
+        "letterSpacing": "{letter-spacing.normal}"
+      },
+      "$type": "typography"
+    },
+    "heading-base": {
+      "$value": {
+        "fontFamily": "{font-family.display}",
+        "fontWeight": "{font-weight.regular}",
+        "fontSize": "{font-size.md}",
+        "lineHeight": "{line-height.relaxed}",
+        "letterSpacing": "{letter-spacing.normal}"
+      },
+      "$type": "typography"
+    },
+    "heading-small": {
+      "$value": {
+        "fontFamily": "{font-family.display}",
+        "fontWeight": "{font-weight.semibold}",
+        "fontSize": "{font-size.sm}",
+        "lineHeight": "{line-height.relaxed}",
+        "letterSpacing": "{letter-spacing.normal}"
+      },
+      "$type": "typography"
+    },
+    "body-xl": {
+      "$value": {
+        "fontFamily": "{font-family.body}",
+        "fontWeight": "{font-weight.medium}",
+        "fontSize": "{font-size.body-xl}",
+        "lineHeight": "{line-height.loose}",
+        "letterSpacing": "{letter-spacing.normal}"
+      },
+      "$type": "typography"
+    },
+    "body-large": {
+      "$value": {
+        "fontFamily": "{font-family.body}",
+        "fontWeight": "{font-weight.medium}",
+        "fontSize": "{font-size.body-lg}",
+        "lineHeight": "{line-height.loose}",
+        "letterSpacing": "{letter-spacing.normal}"
+      },
+      "$type": "typography"
+    },
+    "body-medium": {
+      "$value": {
+        "fontFamily": "{font-family.body}",
+        "fontWeight": "{font-weight.medium}",
+        "fontSize": "{font-size.body-md}",
+        "lineHeight": "{line-height.loose}",
+        "letterSpacing": "{letter-spacing.normal}"
+      },
+      "$type": "typography"
+    },
+    "body-base": {
+      "$value": {
+        "fontFamily": "{font-family.body}",
+        "fontWeight": "{font-weight.medium}",
+        "fontSize": "{font-size.body-base}",
+        "lineHeight": "{line-height.loose}",
+        "letterSpacing": "{letter-spacing.normal}"
+      },
+      "$type": "typography"
+    }
+  }
+}

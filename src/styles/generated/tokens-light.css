@@ -1,0 +1,46 @@
+/**
+ * Do not edit directly, this file was auto-generated.
+ */
+
+:root {
+  --background: #FAF5EA;
+  --foreground: #141414;
+  --card: #FFFEF7;
+  --card-foreground: #141414;
+  --popover: #FFFEF7;
+  --popover-foreground: #141414;
+  --primary: #FF3317;
+  --primary-foreground: #FAF5EA;
+  --secondary: #F0F0F0;
+  --secondary-foreground: #141414;
+  --muted: #F0F0F0;
+  --muted-foreground: #575757;
+  --accent: #FFD100;
+  --accent-foreground: #141414;
+  --destructive: #EF4444;
+  --destructive-foreground: #FAF5EA;
+  --border: #D0D5D7;
+  --input: #D0D5D7;
+  --ring: #FF3317;
+  --chart-1: #FF3317;
+  --chart-2: #5DAAD6;
+  --chart-3: #FFD100;
+  --chart-4: #515151;
+  --chart-5: #FE006A;
+  --fire: #FF3317;
+  --fire-foreground: #FAF5EA;
+  --spectrum-magenta: #FE006A;
+  --spectrum-purple: #D300C5;
+  --spectrum-orange: #FD4C2A;
+  --spectrum-gold: #FFD100;
+  --ice: #5DAAD6;
+  --ice-foreground: #141414;
+  --sidebar-background: #FAF5EA;
+  --sidebar-foreground: #141414;
+  --sidebar-primary: #FF3317;
+  --sidebar-primary-foreground: #FAF5EA;
+  --sidebar-accent: #FFD100;
+  --sidebar-accent-foreground: #141414;
+  --sidebar-border: #D0D5D7;
+  --sidebar-ring: #FF3317;
+}
