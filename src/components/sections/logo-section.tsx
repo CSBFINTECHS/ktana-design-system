@@ -262,34 +262,53 @@ export function LogoSection() {
 
       {/* Character / Samurai */}
       <SubSection title="Character — Samurai">
-        <div className="grid gap-6 md:grid-cols-2">
-          <div className="flex flex-col items-center gap-3">
-            <div className="flex items-center justify-center rounded-xl border border-neutral-700/30 bg-neutral-900 p-6">
-              <Image
-                src={assetUrl("/brand/character/samurai.png")}
-                alt="KTANA Samurai"
-                width={300}
-                height={357}
-                className="h-72 w-auto"
-                style={{ height: 288, width: "auto" }}
-                unoptimized
-              />
-            </div>
-            <span className="text-xs text-neutral-500">Samurai (isolado)</span>
+        <p className="mb-6 text-sm text-neutral-400">
+          Mascote oficial da marca — personagem samurai com katana vermelha. Veja todos os renders em Aplicacoes.
+        </p>
+        <div className="overflow-hidden rounded-xl border border-neutral-700/30">
+          <Image
+            src={assetUrl("/brand/character/samurai-principal.png")}
+            alt="KTANA Embrace The Future"
+            width={2880}
+            height={1062}
+            className="w-full"
+            style={{ width: "100%", height: "auto" }}
+            unoptimized
+          />
+        </div>
+        <div className="mt-4 grid grid-cols-3 gap-4">
+          <div className="overflow-hidden rounded-xl bg-neutral-900">
+            <Image
+              src={assetUrl("/brand/character/samurai-neon.png")}
+              alt="Samurai Neon"
+              width={948}
+              height={1128}
+              className="w-full"
+              style={{ width: "100%", height: "auto" }}
+              unoptimized
+            />
           </div>
-          <div className="flex flex-col items-center gap-3">
-            <div className="flex items-center justify-center overflow-hidden rounded-xl border border-neutral-700/30 bg-neutral-900 p-6">
-              <Image
-                src={assetUrl("/brand/character/samurai-principal.png")}
-                alt="KTANA Embrace The Future"
-                width={500}
-                height={185}
-                className="w-full"
-                style={{ width: "100%", height: "auto" }}
-                unoptimized
-              />
-            </div>
-            <span className="text-xs text-neutral-500">Composicao Principal — Embrace The Future</span>
+          <div className="overflow-hidden rounded-xl bg-neutral-900">
+            <Image
+              src={assetUrl("/brand/character/samurai-main.png")}
+              alt="Samurai Main"
+              width={948}
+              height={1128}
+              className="w-full"
+              style={{ width: "100%", height: "auto" }}
+              unoptimized
+            />
+          </div>
+          <div className="overflow-hidden rounded-xl bg-neutral-900">
+            <Image
+              src={assetUrl("/brand/character/samurai-holographic.png")}
+              alt="Samurai Holographic"
+              width={948}
+              height={1128}
+              className="w-full"
+              style={{ width: "100%", height: "auto" }}
+              unoptimized
+            />
           </div>
         </div>
       </SubSection>
