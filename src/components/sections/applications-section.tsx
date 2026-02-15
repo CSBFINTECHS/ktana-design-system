@@ -273,15 +273,33 @@ export function ApplicationsSection() {
       </SubSection>
 
       {/* ══ Backgrounds ══ */}
-      <SubSection title="Backgrounds">
+      <SubSection title="Backgrounds — Composicoes com Personagem">
         <p className="mb-6 text-sm text-neutral-400">
-          Composicoes de fundo oficiais — dark mode com grafismos e iluminacao vermelha.
+          Composicoes oficiais com a personagem AI integrada aos backgrounds da marca.
         </p>
-        <div className="grid gap-4 md:grid-cols-2">
-          <div className="overflow-hidden rounded-xl border border-white/5">
+
+        {/* Hero Banner — full width */}
+        <div className="overflow-hidden rounded-xl border border-white/5 bg-black">
+          <Image
+            src={assetUrl("/brand/bg/hero-banner.png")}
+            alt="Hero Banner — Personagem AI"
+            width={3380}
+            height={1800}
+            className="w-full"
+            style={{ width: "100%", height: "auto" }}
+            unoptimized
+          />
+          <div className="bg-neutral-900 px-4 py-3">
+            <p className="text-sm font-medium text-neutral-200">Hero Banner — Personagem AI com energia vermelha</p>
+          </div>
+        </div>
+
+        {/* Banner Section 2 + Embrace The Future */}
+        <div className="mt-4 grid gap-4 md:grid-cols-2">
+          <div className="overflow-hidden rounded-xl border border-white/5 bg-black">
             <Image
               src={assetUrl("/brand/bg/banner-section2.png")}
-              alt="Banner Section 2"
+              alt="Banner Section 2 — LP"
               width={3924}
               height={1800}
               className="w-full"
@@ -289,40 +307,65 @@ export function ApplicationsSection() {
               unoptimized
             />
             <div className="bg-neutral-900 px-4 py-3">
-              <p className="text-xs font-medium text-neutral-300">Banner Section 2 — LP</p>
+              <p className="text-xs font-medium text-neutral-300">Section 2 — Landing Page</p>
             </div>
           </div>
-          <div className="overflow-hidden rounded-xl border border-white/5">
+          <div className="overflow-hidden rounded-xl border border-white/5 bg-black">
             <Image
-              src={assetUrl("/brand/bg/bg-dark-composition.png")}
-              alt="Bg Dark Composition"
-              width={2160}
-              height={2700}
+              src={assetUrl("/brand/character/samurai-principal.png")}
+              alt="Embrace The Future — Composicao"
+              width={2880}
+              height={1062}
               className="w-full"
-              style={{ width: "100%", height: "auto", maxHeight: 360, objectFit: "cover", objectPosition: "top" }}
+              style={{ width: "100%", height: "auto" }}
               unoptimized
             />
             <div className="bg-neutral-900 px-4 py-3">
-              <p className="text-xs font-medium text-neutral-300">Bg Dark — Composicao</p>
+              <p className="text-xs font-medium text-neutral-300">Embrace The Future — Composicao Principal</p>
             </div>
           </div>
         </div>
-        <div className="mt-4 grid gap-4 md:grid-cols-3">
+
+        {/* Banner Principal Social */}
+        <div className="mt-4 overflow-hidden rounded-xl border border-white/5 bg-black">
+          <Image
+            src={assetUrl("/brand/social/banner-principal.png")}
+            alt="Banner Principal — Redes Sociais"
+            width={2880}
+            height={1616}
+            className="w-full"
+            style={{ width: "100%", height: "auto" }}
+            unoptimized
+          />
+          <div className="bg-neutral-900 px-4 py-3">
+            <p className="text-xs font-medium text-neutral-300">Banner Principal — Redes Sociais</p>
+          </div>
+        </div>
+      </SubSection>
+
+      {/* ══ Fundos e Texturas ══ */}
+      <SubSection title="Fundos & Texturas">
+        <p className="mb-6 text-sm text-neutral-400">
+          Backgrounds e texturas base para composicoes — dark mode com grafismos.
+        </p>
+        <div className="grid gap-4 md:grid-cols-2">
           {[
-            { src: "/brand/bg/bg-dark.png", label: "Bg Dark" },
-            { src: "/brand/bg/bg-manual.png", label: "Bg Manual" },
-            { src: "/brand/social/bg-post.png", label: "Bg Post" },
+            { src: "/brand/bg/bg-dark-composition.png", label: "Dark Composition", w: 2160, h: 2700 },
+            { src: "/brand/bg/bg-dark.png", label: "Bg Dark", w: 2160, h: 2700 },
+            { src: "/brand/bg/bg-manual.png", label: "Bg Manual", w: 2160, h: 2700 },
+            { src: "/brand/social/bg-post.png", label: "Bg Post", w: 2160, h: 2700 },
           ].map((bg) => (
             <div key={bg.label} className="overflow-hidden rounded-xl border border-white/5">
-              <Image
-                src={assetUrl(bg.src)}
-                alt={bg.label}
-                width={2160}
-                height={2700}
-                className="w-full"
-                style={{ width: "100%", height: "auto", maxHeight: 240, objectFit: "cover", objectPosition: "top" }}
-                unoptimized
-              />
+              <div className="aspect-[16/10] overflow-hidden bg-black">
+                <Image
+                  src={assetUrl(bg.src)}
+                  alt={bg.label}
+                  width={bg.w}
+                  height={bg.h}
+                  className="h-full w-full object-cover object-top"
+                  unoptimized
+                />
+              </div>
               <div className="bg-neutral-900 px-4 py-3">
                 <p className="text-xs font-medium text-neutral-300">{bg.label}</p>
               </div>
