@@ -6,3 +6,4 @@ export { GradientsSection } from "./gradients-section";
 export { TokensSection } from "./tokens-section";
 export { ApplicationsSection } from "./applications-section";
 export { SocialSection } from "./social-section";
+export { EmailSignaturesSection } from "./email-signatures-section";

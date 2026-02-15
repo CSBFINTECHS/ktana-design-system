@@ -9,6 +9,7 @@ import {
   TokensSection,
   ApplicationsSection,
   SocialSection,
+  EmailSignaturesSection,
 } from "@/components/sections";
 
 export default function DesignSystemPage() {
@@ -39,6 +40,9 @@ export default function DesignSystemPage() {
       <SectionDivider />
 
       <SocialSection />
+      <SectionDivider />
+
+      <EmailSignaturesSection />
 
       <DSFooter />
     </div>

@@ -44,6 +44,7 @@ export function DSFooter() {
               <li><a href="#aplicacoes" className="transition-colors hover:text-neutral-200">Backgrounds LP</a></li>
               <li><a href="#aplicacoes" className="transition-colors hover:text-neutral-200">IA Division</a></li>
               <li><a href="#social-media" className="transition-colors hover:text-neutral-200">Social Media</a></li>
+              <li><a href="#assinaturas" className="transition-colors hover:text-neutral-200">Assinaturas de Email</a></li>
             </ul>
           </div>
 
