@@ -179,62 +179,6 @@ function IGStoryTemplate({
   );
 }
 
-/* ─── Profile Cover Template ─── */
-
-function ProfileCoverTemplate({
-  platform,
-  dimensions,
-  ratio,
-}: {
-  platform: string;
-  dimensions: string;
-  ratio: string;
-}) {
-  return (
-    <div className="overflow-hidden rounded-xl border border-white/5">
-      <div
-        className="relative flex items-center justify-between bg-neutral-900 px-8"
-        style={{ aspectRatio: ratio }}
-      >
-        {/* Left: Logo + tagline */}
-        <div className="flex flex-col gap-2">
-          <Image
-            src={assetUrl("/brand/logo-horizontal/dark.svg")}
-            alt="KTANA"
-            width={120}
-            height={42}
-            className="h-5 w-auto"
-            unoptimized
-          />
-          <p className="font-display text-[9px] uppercase tracking-[0.3em] text-neutral-500">
-            Embrace The Future
-          </p>
-        </div>
-
-        {/* Right: accent stripes */}
-        <div className="flex flex-col items-end gap-1">
-          <div className="h-0.5 w-20 bg-brand-500" />
-          <div className="h-0.5 w-14 bg-[#FFD100]" />
-          <div className="h-0.5 w-8 bg-[#5DAAD6]" />
-        </div>
-
-        {/* Grid overlay */}
-        <div className="pointer-events-none absolute inset-0 border-2 border-dashed border-brand-500/10" />
-        <div className="pointer-events-none absolute inset-y-0 left-1/3 border-l border-dashed border-brand-500/10" />
-        <div className="pointer-events-none absolute inset-y-0 left-2/3 border-l border-dashed border-brand-500/10" />
-      </div>
-
-      <div className="flex items-center justify-between bg-neutral-900/80 px-4 py-3">
-        <div className="flex items-center gap-2">
-          <p className="text-sm font-medium text-neutral-100">{platform}</p>
-          <TokenBadge>{dimensions}</TokenBadge>
-        </div>
-        <TokenBadge>ratio: {ratio}</TokenBadge>
-      </div>
-    </div>
-  );
-}
-
 /* ─── Main Section ─── */
 
 export function SocialSection() {
@@ -387,18 +331,18 @@ export function SocialSection() {
         </div>
       </SubSection>
 
-      {/* ── Capas Reais (Assets do KIT Branding) ── */}
-      <SubSection title="Capas — Assets Oficiais">
+      {/* ── Capas de Perfil — Assets Oficiais ── */}
+      <SubSection title="Capas de Perfil — Redes Sociais">
         <p className="mb-6 text-sm text-neutral-400">
-          Capas exportadas do KIT Branding OFICIAL para todas as plataformas de redes sociais.
+          Capas oficiais desenhadas no KIT Branding KTANA para cada plataforma — samurai com grafismos e Embrace The Future.
         </p>
         <div className="space-y-4">
           {[
-            { src: "/brand/social/capa-social-principal.png", label: "Capa Principal (Base)", w: 5120, h: 1896 },
-            { src: "/brand/social/capa-linkedin-pessoal.png", label: "LinkedIn Pessoal", w: 5120, h: 1274 },
-            { src: "/brand/social/capa-linkedin-company.png", label: "LinkedIn Company", w: 5120, h: 878 },
-            { src: "/brand/social/capa-youtube.png", label: "YouTube Banner", w: 5120, h: 2880 },
-            { src: "/brand/social/capa-twitter.png", label: "Twitter / X", w: 5120, h: 1706 },
+            { src: "/brand/social/capa-social-principal.png", label: "Capa Principal (Base)", w: 5120, h: 1896, platform: "Multi-plataforma" },
+            { src: "/brand/social/capa-linkedin-pessoal.png", label: "LinkedIn Pessoal", w: 5120, h: 1274, platform: "LinkedIn" },
+            { src: "/brand/social/capa-linkedin-company.png", label: "LinkedIn Company Page", w: 5120, h: 878, platform: "LinkedIn" },
+            { src: "/brand/social/capa-youtube.png", label: "YouTube Channel Banner", w: 5120, h: 2880, platform: "YouTube" },
+            { src: "/brand/social/capa-twitter.png", label: "Twitter / X Header", w: 5120, h: 1706, platform: "Twitter / X" },
           ].map((cover) => (
             <div key={cover.label} className="overflow-hidden rounded-xl border border-white/5">
               <Image
@@ -411,28 +355,16 @@ export function SocialSection() {
                 unoptimized
               />
               <div className="bg-neutral-900 px-4 py-3">
-                <div className="flex items-center gap-2">
-                  <p className="text-sm font-medium text-neutral-200">{cover.label}</p>
-                  <TokenBadge>{cover.w} × {cover.h}</TokenBadge>
+                <div className="flex items-center justify-between">
+                  <div className="flex items-center gap-2">
+                    <p className="text-sm font-medium text-neutral-200">{cover.label}</p>
+                    <TokenBadge>{cover.w} × {cover.h}</TokenBadge>
+                  </div>
+                  <span className="text-xs text-neutral-500">{cover.platform}</span>
                 </div>
               </div>
             </div>
           ))}
-        </div>
-      </SubSection>
-
-      {/* ── Profile Covers (Templates) ── */}
-      <SubSection title="Capas de Perfil — Templates">
-        <p className="mb-6 text-sm text-neutral-400">
-          Layout horizontal com logo a esquerda e accent stripes a direita. Grid dividido em tercos.
-        </p>
-        <div className="space-y-6">
-          <ProfileCoverTemplate platform="Instagram" dimensions="1080 × 1080" ratio="1/1" />
-          <ProfileCoverTemplate platform="YouTube Channel Banner" dimensions="2560 × 1440" ratio="16/9" />
-          <ProfileCoverTemplate platform="TikTok Header" dimensions="1440 × 480" ratio="3/1" />
-          <ProfileCoverTemplate platform="Twitter / X Header" dimensions="1500 × 500" ratio="3/1" />
-          <ProfileCoverTemplate platform="Facebook Cover" dimensions="820 × 312" ratio="2.63/1" />
-          <ProfileCoverTemplate platform="LinkedIn Cover" dimensions="1584 × 396" ratio="4/1" />
         </div>
       </SubSection>
 
