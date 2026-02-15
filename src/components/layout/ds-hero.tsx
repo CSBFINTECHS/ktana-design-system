@@ -3,7 +3,7 @@ import { assetUrl } from "@/lib/utils";
 
 export function DSHero() {
   return (
-    <section className="relative flex min-h-[800px] flex-col overflow-hidden bg-black lg:min-h-screen">
+    <section id="brand" className="relative flex min-h-[800px] flex-col overflow-hidden bg-black lg:min-h-screen">
 
       {/* ── Background — Hero Banner da LP (personagem AI integrada) ── */}
       <div className="absolute inset-0">
