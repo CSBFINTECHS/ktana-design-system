@@ -36,14 +36,14 @@ export function DSFooter() {
 
           <div>
             <p className="mb-4 text-xs font-semibold uppercase tracking-[0.15em] text-brand-500">
-              Aplicacoes
+              Aplicacoes & Social
             </p>
             <ul className="space-y-2 text-sm text-neutral-500">
               <li><a href="#aplicacoes" className="transition-colors hover:text-neutral-200">Personagem 3D</a></li>
               <li><a href="#aplicacoes" className="transition-colors hover:text-neutral-200">Grafismos</a></li>
-              <li><a href="#aplicacoes" className="transition-colors hover:text-neutral-200">Backgrounds</a></li>
-              <li><a href="#aplicacoes" className="transition-colors hover:text-neutral-200">Redes Sociais</a></li>
+              <li><a href="#aplicacoes" className="transition-colors hover:text-neutral-200">Backgrounds LP</a></li>
               <li><a href="#aplicacoes" className="transition-colors hover:text-neutral-200">IA Division</a></li>
+              <li><a href="#social-media" className="transition-colors hover:text-neutral-200">Social Media</a></li>
             </ul>
           </div>
 

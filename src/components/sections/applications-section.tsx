@@ -69,7 +69,7 @@ export function ApplicationsSection() {
       </SubSection>
 
       {/* ══ Composicao Embrace The Future ══ */}
-      <SubSection title="Embrace The Future — Composicao Principal">
+      <SubSection title="Embrace The Future — Composicoes">
         <div className="overflow-hidden rounded-xl border border-white/5">
           <Image
             src={assetUrl("/brand/character/samurai-principal.png")}
@@ -81,28 +81,47 @@ export function ApplicationsSection() {
             unoptimized
           />
         </div>
+        <div className="mt-4 grid gap-4 md:grid-cols-2">
+          <div className="overflow-hidden rounded-xl border border-white/5 bg-black">
+            <Image
+              src={assetUrl("/brand/bg/manual-embrace-future-samurai.png")}
+              alt="Manual — Samurai Embrace The Future"
+              width={3840}
+              height={2160}
+              className="w-full"
+              style={{ width: "100%", height: "auto" }}
+              unoptimized
+            />
+            <div className="bg-neutral-900 px-4 py-3">
+              <p className="text-xs font-medium text-neutral-300">Manual — Samurai Neon</p>
+            </div>
+          </div>
+          <div className="overflow-hidden rounded-xl border border-white/5 bg-black">
+            <Image
+              src={assetUrl("/brand/bg/manual-embrace-future-dark.png")}
+              alt="Manual — Dark Embrace The Future"
+              width={3840}
+              height={2160}
+              className="w-full"
+              style={{ width: "100%", height: "auto" }}
+              unoptimized
+            />
+            <div className="bg-neutral-900 px-4 py-3">
+              <p className="text-xs font-medium text-neutral-300">Manual — Dark Variant</p>
+            </div>
+          </div>
+        </div>
       </SubSection>
 
-      {/* ══ Banners e Hero ══ */}
-      <SubSection title="Banners — Hero Visual">
+      {/* ══ Banner Principal — Branding ══ */}
+      <SubSection title="Banner Principal — Branding">
         <p className="mb-6 text-sm text-neutral-400">
-          Composicoes de banner para hero sections e redes sociais com personagem AI.
+          Composicao principal do KIT Branding com samurai — Embrace The Future.
         </p>
         <div className="overflow-hidden rounded-xl border border-white/5 bg-black">
           <Image
-            src={assetUrl("/brand/bg/hero-banner.png")}
-            alt="Hero Banner KTANA"
-            width={3380}
-            height={1800}
-            className="w-full"
-            style={{ width: "100%", height: "auto" }}
-            unoptimized
-          />
-        </div>
-        <div className="mt-4 overflow-hidden rounded-xl border border-white/5 bg-black">
-          <Image
             src={assetUrl("/brand/social/banner-principal.png")}
-            alt="Banner Principal — Redes Sociais"
+            alt="Banner Principal — Embrace The Future"
             width={2880}
             height={1616}
             className="w-full"
@@ -110,39 +129,12 @@ export function ApplicationsSection() {
             unoptimized
           />
           <div className="bg-neutral-900 px-4 py-3">
-            <p className="text-sm font-medium text-neutral-200">Banner Principal — Redes Sociais</p>
+            <p className="text-sm font-medium text-neutral-200">Embrace The Future — Banner Branding</p>
           </div>
         </div>
       </SubSection>
 
-      {/* ══ Capas de Redes Sociais ══ */}
-      <SubSection title="Capas — Redes Sociais">
-        <p className="mb-6 text-sm text-neutral-400">
-          Templates oficiais de capas para diferentes plataformas de redes sociais.
-        </p>
-        <div className="space-y-4">
-          {[
-            { src: "/brand/social/cover-principal.png", label: "Capa Principal (Base)", w: 5120, h: 1896 },
-            { src: "/brand/social/cover-linkedin.png", label: "LinkedIn Pessoal", w: 5120, h: 1274 },
-            { src: "/brand/social/cover-twitter.png", label: "Twitter / X", w: 5120, h: 1706 },
-          ].map((cover) => (
-            <div key={cover.label} className="overflow-hidden rounded-xl border border-white/5">
-              <Image
-                src={assetUrl(cover.src)}
-                alt={cover.label}
-                width={cover.w}
-                height={cover.h}
-                className="w-full"
-                style={{ width: "100%", height: "auto" }}
-                unoptimized
-              />
-              <div className="bg-neutral-900 px-4 py-3">
-                <p className="text-sm font-medium text-neutral-200">{cover.label}</p>
-              </div>
-            </div>
-          ))}
-        </div>
-      </SubSection>
+      {/* Capas e social media movidos para seção Social Media */}
 
       {/* ══ Elementos 3D ══ */}
       <SubSection title="Elementos 3D">
@@ -272,17 +264,17 @@ export function ApplicationsSection() {
         </div>
       </SubSection>
 
-      {/* ══ Backgrounds ══ */}
-      <SubSection title="Backgrounds — Composicoes com Personagem">
+      {/* ══ Backgrounds — Landing Page ══ */}
+      <SubSection title="Backgrounds — Landing Page">
         <p className="mb-6 text-sm text-neutral-400">
-          Composicoes oficiais com a personagem AI integrada aos backgrounds da marca.
+          Composicoes da LP oficial com personagem AI robotica — linguagem visual dark + vermelho.
         </p>
 
         {/* Hero Banner — full width */}
         <div className="overflow-hidden rounded-xl border border-white/5 bg-black">
           <Image
             src={assetUrl("/brand/bg/hero-banner.png")}
-            alt="Hero Banner — Personagem AI"
+            alt="Hero Banner — LP Personagem AI"
             width={3380}
             height={1800}
             className="w-full"
@@ -290,55 +282,68 @@ export function ApplicationsSection() {
             unoptimized
           />
           <div className="bg-neutral-900 px-4 py-3">
-            <p className="text-sm font-medium text-neutral-200">Hero Banner — Personagem AI com energia vermelha</p>
+            <p className="text-sm font-medium text-neutral-200">Hero — Personagem AI com energia vermelha</p>
+            <p className="mt-1 text-xs text-neutral-500">3380 × 1800px — Background principal da Landing Page</p>
           </div>
         </div>
 
-        {/* Banner Section 2 + Embrace The Future */}
-        <div className="mt-4 grid gap-4 md:grid-cols-2">
-          <div className="overflow-hidden rounded-xl border border-white/5 bg-black">
-            <Image
-              src={assetUrl("/brand/bg/banner-section2.png")}
-              alt="Banner Section 2 — LP"
-              width={3924}
-              height={1800}
-              className="w-full"
-              style={{ width: "100%", height: "auto" }}
-              unoptimized
-            />
-            <div className="bg-neutral-900 px-4 py-3">
-              <p className="text-xs font-medium text-neutral-300">Section 2 — Landing Page</p>
-            </div>
-          </div>
-          <div className="overflow-hidden rounded-xl border border-white/5 bg-black">
-            <Image
-              src={assetUrl("/brand/character/samurai-principal.png")}
-              alt="Embrace The Future — Composicao"
-              width={2880}
-              height={1062}
-              className="w-full"
-              style={{ width: "100%", height: "auto" }}
-              unoptimized
-            />
-            <div className="bg-neutral-900 px-4 py-3">
-              <p className="text-xs font-medium text-neutral-300">Embrace The Future — Composicao Principal</p>
-            </div>
-          </div>
-        </div>
-
-        {/* Banner Principal Social */}
+        {/* Banner Section 2 */}
         <div className="mt-4 overflow-hidden rounded-xl border border-white/5 bg-black">
           <Image
-            src={assetUrl("/brand/social/banner-principal.png")}
-            alt="Banner Principal — Redes Sociais"
-            width={2880}
-            height={1616}
+            src={assetUrl("/brand/bg/banner-section2.png")}
+            alt="Section 2 — LP"
+            width={3924}
+            height={1800}
             className="w-full"
             style={{ width: "100%", height: "auto" }}
             unoptimized
           />
           <div className="bg-neutral-900 px-4 py-3">
-            <p className="text-xs font-medium text-neutral-300">Banner Principal — Redes Sociais</p>
+            <p className="text-sm font-medium text-neutral-200">Section 2 — Personagem com veu vermelho</p>
+            <p className="mt-1 text-xs text-neutral-500">3924 × 1800px — Variacao artistica da LP</p>
+          </div>
+        </div>
+
+        {/* Cyberpunk portrait */}
+        <div className="mt-4 grid gap-4 md:grid-cols-2">
+          <div className="overflow-hidden rounded-xl border border-white/5 bg-black">
+            <div className="aspect-video overflow-hidden">
+              <Image
+                src={assetUrl("/brand/character/ktana-cyberpunk.jpg")}
+                alt="KTANA Cyberpunk — Retrato AI"
+                width={1600}
+                height={1600}
+                className="h-full w-full object-cover"
+                unoptimized
+              />
+            </div>
+            <div className="bg-neutral-900 px-4 py-3">
+              <p className="text-xs font-medium text-neutral-300">Cyberpunk — Retrato AI close-up</p>
+            </div>
+          </div>
+          <div className="flex flex-col gap-4">
+            <div className="flex-1 overflow-hidden rounded-xl border border-white/5 bg-neutral-900 p-6">
+              <p className="mb-2 text-xs font-semibold uppercase tracking-[0.15em] text-brand-500">Linguagem Visual LP</p>
+              <p className="text-sm leading-relaxed text-neutral-400">
+                A Landing Page utiliza composicoes com personagem AI robotica
+                em estilo dark futurista — diferente do samurai do KIT Branding.
+                Efeitos de energia vermelha, iluminacao dramatica e estetica cyberpunk.
+              </p>
+              <div className="mt-4 space-y-2">
+                <div className="flex items-center gap-2">
+                  <div className="h-3 w-3 rounded-full bg-[#D70030]" />
+                  <span className="text-xs text-neutral-500">Energia vermelha</span>
+                </div>
+                <div className="flex items-center gap-2">
+                  <div className="h-3 w-3 rounded-full bg-black border border-neutral-700" />
+                  <span className="text-xs text-neutral-500">Dark absoluto</span>
+                </div>
+                <div className="flex items-center gap-2">
+                  <div className="h-3 w-3 rounded-full bg-[#5DAAD6]" />
+                  <span className="text-xs text-neutral-500">Acentos azul gelo</span>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </SubSection>
@@ -374,27 +379,7 @@ export function ApplicationsSection() {
         </div>
       </SubSection>
 
-      {/* ══ Presenca Digital ══ */}
-      <SubSection title="Presenca Digital — Mockups">
-        <p className="mb-6 text-sm text-neutral-400">
-          Mockups e templates de presenca digital para redes sociais.
-        </p>
-        <div className="overflow-hidden rounded-xl border border-white/5">
-          <Image
-            src={assetUrl("/brand/social/mockup-post-feed.png")}
-            alt="Mockup Post Feed"
-            width={2160}
-            height={3890}
-            className="w-full"
-            style={{ width: "100%", height: "auto", maxHeight: 640, objectFit: "cover", objectPosition: "top" }}
-            unoptimized
-          />
-          <div className="bg-neutral-900 px-4 py-3">
-            <p className="text-sm font-medium text-neutral-200">Mockup — Post Feed Instagram</p>
-            <p className="mt-1 text-xs text-neutral-500">Simulacao de post com branding KTANA aplicado</p>
-          </div>
-        </div>
-      </SubSection>
+      {/* Presenca Digital movido para seção Social Media */}
     </section>
   );
 }

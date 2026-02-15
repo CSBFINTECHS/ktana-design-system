@@ -8,6 +8,7 @@ import {
   GradientsSection,
   TokensSection,
   ApplicationsSection,
+  SocialSection,
 } from "@/components/sections";
 
 export default function DesignSystemPage() {
@@ -35,6 +36,9 @@ export default function DesignSystemPage() {
       <SectionDivider />
 
       <ApplicationsSection />
+      <SectionDivider />
+
+      <SocialSection />
 
       <DSFooter />
     </div>
