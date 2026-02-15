@@ -11,11 +11,28 @@ const CHARACTER_RENDERS = [
   { src: "/brand/character/samurai-attack.png", label: "Attack", w: 948, h: 1477 },
 ] as const;
 
+const GRAFISMOS = [
+  { src: "/brand/grafismo/grafismo-1.png", label: "Grafismo 1", w: 1827, h: 777 },
+  { src: "/brand/grafismo/grafismo-2.svg", label: "Grafismo 2", w: 444, h: 242 },
+  { src: "/brand/grafismo/grafismo-3.svg", label: "Grafismo 3", w: 444, h: 247 },
+  { src: "/brand/grafismo/grafismo-4.svg", label: "Grafismo 4", w: 444, h: 493 },
+  { src: "/brand/grafismo/grafismo-5.svg", label: "Grafismo 5", w: 444, h: 242 },
+  { src: "/brand/grafismo/grafismo-6.svg", label: "Grafismo 6", w: 444, h: 247 },
+] as const;
+
+const IA_DIVISIONS = [
+  { src: "/brand/ia-division/ia-studio.png", label: "IA Studio", w: 831, h: 1223 },
+  { src: "/brand/ia-division/ia-infra.png", label: "IA Infra", w: 831, h: 1223 },
+  { src: "/brand/ia-division/ia-techfin.png", label: "IA Tech Fin", w: 831, h: 1223 },
+  { src: "/brand/ia-division/ia-lab.png", label: "IA Lab", w: 831, h: 1223 },
+  { src: "/brand/ia-division/ia-ventures.png", label: "IA Ventures", w: 831, h: 1223 },
+] as const;
+
 export function ApplicationsSection() {
   return (
     <section id="aplicacoes" className="mx-auto max-w-[1400px] px-8 py-20">
       <SectionLabel>APLICACOES</SectionLabel>
-      <SectionTitle sub="Personagem 3D, grafismos, backgrounds, elementos visuais e templates de redes sociais">
+      <SectionTitle sub="Personagem 3D, grafismos, backgrounds, elementos visuais, redes sociais e sub-marcas IA">
         Aplicacoes da Marca
       </SectionTitle>
 
@@ -52,12 +69,27 @@ export function ApplicationsSection() {
         </div>
       </SubSection>
 
-      {/* ══ Banner Hero — Composicao Principal ══ */}
-      <SubSection title="Composicao Hero — AI Character">
-        <p className="mb-6 text-sm text-neutral-400">
-          Banner principal da marca com personagem AI robotica e energia vermelha — usado como hero visual.
-        </p>
+      {/* ══ Composicao Embrace The Future ══ */}
+      <SubSection title="Embrace The Future — Composicao Principal">
         <div className="overflow-hidden rounded-xl border border-white/5">
+          <Image
+            src={assetUrl("/brand/character/samurai-principal.png")}
+            alt="KTANA Embrace The Future"
+            width={2880}
+            height={1062}
+            className="w-full"
+            style={{ width: "100%", height: "auto" }}
+            unoptimized
+          />
+        </div>
+      </SubSection>
+
+      {/* ══ Banners e Hero ══ */}
+      <SubSection title="Banners — Hero Visual">
+        <p className="mb-6 text-sm text-neutral-400">
+          Composicoes de banner para hero sections e redes sociais com personagem AI.
+        </p>
+        <div className="overflow-hidden rounded-xl border border-white/5 bg-black">
           <Image
             src={assetUrl("/brand/bg/hero-banner.png")}
             alt="Hero Banner KTANA"
@@ -68,7 +100,7 @@ export function ApplicationsSection() {
             unoptimized
           />
         </div>
-        <div className="mt-4 overflow-hidden rounded-xl border border-white/5">
+        <div className="mt-4 overflow-hidden rounded-xl border border-white/5 bg-black">
           <Image
             src={assetUrl("/brand/social/banner-principal.png")}
             alt="Banner Principal — Redes Sociais"
@@ -84,18 +116,32 @@ export function ApplicationsSection() {
         </div>
       </SubSection>
 
-      {/* ══ Composicao Embrace The Future ══ */}
-      <SubSection title="Embrace The Future — Samurai Principal">
-        <div className="overflow-hidden rounded-xl border border-white/5">
-          <Image
-            src={assetUrl("/brand/character/samurai-principal.png")}
-            alt="KTANA Embrace The Future"
-            width={2880}
-            height={1062}
-            className="w-full"
-            style={{ width: "100%", height: "auto" }}
-            unoptimized
-          />
+      {/* ══ Capas de Redes Sociais ══ */}
+      <SubSection title="Capas — Redes Sociais">
+        <p className="mb-6 text-sm text-neutral-400">
+          Templates oficiais de capas para diferentes plataformas de redes sociais.
+        </p>
+        <div className="space-y-4">
+          {[
+            { src: "/brand/social/cover-principal.png", label: "Capa Principal (Base)", w: 5120, h: 1896 },
+            { src: "/brand/social/cover-linkedin.png", label: "LinkedIn Pessoal", w: 5120, h: 1274 },
+            { src: "/brand/social/cover-twitter.png", label: "Twitter / X", w: 5120, h: 1706 },
+          ].map((cover) => (
+            <div key={cover.label} className="overflow-hidden rounded-xl border border-white/5">
+              <Image
+                src={assetUrl(cover.src)}
+                alt={cover.label}
+                width={cover.w}
+                height={cover.h}
+                className="w-full"
+                style={{ width: "100%", height: "auto" }}
+                unoptimized
+              />
+              <div className="bg-neutral-900 px-4 py-3">
+                <p className="text-sm font-medium text-neutral-200">{cover.label}</p>
+              </div>
+            </div>
+          ))}
         </div>
       </SubSection>
 
@@ -133,7 +179,9 @@ export function ApplicationsSection() {
               <p className="text-sm font-medium text-neutral-200">Composicao 3D — Group 827</p>
             </div>
           </div>
-          <div className="overflow-hidden rounded-xl border border-white/5 bg-black md:col-span-2">
+        </div>
+        <div className="mt-6 overflow-hidden rounded-xl border border-white/5 bg-black">
+          <div className="mx-auto max-w-md py-4">
             <Image
               src={assetUrl("/brand/3d/technologies.png")}
               alt="Technologies"
@@ -143,32 +191,62 @@ export function ApplicationsSection() {
               style={{ width: "100%", height: "auto" }}
               unoptimized
             />
-            <div className="px-4 py-3">
-              <p className="text-sm font-medium text-neutral-200">Technologies — Stack Grid</p>
-            </div>
           </div>
+          <div className="px-4 py-3">
+            <p className="text-sm font-medium text-neutral-200">Technologies — Stack Grid</p>
+            <p className="mt-1 text-xs text-neutral-500">Logos das tecnologias utilizadas na plataforma</p>
+          </div>
+        </div>
+      </SubSection>
+
+      {/* ══ IA Division — Sub-marcas ══ */}
+      <SubSection title="IA Division — Sub-marcas">
+        <p className="mb-6 text-sm text-neutral-400">
+          Mockups das 5 sub-marcas da divisao de Inteligencia Artificial da KTANA.
+        </p>
+        <div className="grid grid-cols-2 gap-4 md:grid-cols-5">
+          {IA_DIVISIONS.map((ia) => (
+            <div key={ia.label} className="overflow-hidden rounded-xl border border-white/5">
+              <Image
+                src={assetUrl(ia.src)}
+                alt={ia.label}
+                width={ia.w}
+                height={ia.h}
+                className="w-full"
+                style={{ width: "100%", height: "auto" }}
+                unoptimized
+              />
+              <div className="bg-neutral-900 px-3 py-2">
+                <p className="text-center text-xs font-medium text-neutral-300">{ia.label}</p>
+              </div>
+            </div>
+          ))}
         </div>
       </SubSection>
 
       {/* ══ Grafismos ══ */}
       <SubSection title="Grafismos">
         <p className="mb-6 text-sm text-neutral-400">
-          Padroes geometricos e texturas derivados da identidade KTANA — usados como elementos decorativos.
+          Padroes geometricos derivados da identidade KTANA — 6 variacoes + texturas de fundo.
         </p>
-        <div className="grid gap-6 md:grid-cols-2">
-          <div className="overflow-hidden rounded-xl border border-white/5 bg-neutral-900 p-6">
-            <Image
-              src={assetUrl("/brand/grafismo/grafismo-1.png")}
-              alt="Grafismo KTANA"
-              width={1827}
-              height={777}
-              className="w-full opacity-80"
-              style={{ width: "100%", height: "auto" }}
-              unoptimized
-            />
-            <p className="mt-3 text-center text-xs text-neutral-500">Grafismo — Padroes geometricos</p>
-          </div>
-          <div className="overflow-hidden rounded-xl border border-white/5 bg-black p-6">
+        <div className="grid grid-cols-2 gap-4 md:grid-cols-3">
+          {GRAFISMOS.map((g) => (
+            <div key={g.label} className="flex flex-col items-center gap-2 rounded-xl border border-white/5 bg-neutral-900 p-4">
+              <Image
+                src={assetUrl(g.src)}
+                alt={g.label}
+                width={g.w}
+                height={g.h}
+                className="w-full opacity-80"
+                style={{ width: "100%", height: "auto" }}
+                unoptimized
+              />
+              <p className="text-[10px] text-neutral-500">{g.label}</p>
+            </div>
+          ))}
+        </div>
+        <div className="mt-6 grid gap-4 md:grid-cols-2">
+          <div className="overflow-hidden rounded-xl border border-white/5 bg-black p-4">
             <Image
               src={assetUrl("/brand/grafismo/lines-bg.png")}
               alt="Lines Background"
@@ -178,29 +256,29 @@ export function ApplicationsSection() {
               style={{ width: "100%", height: "auto" }}
               unoptimized
             />
-            <p className="mt-3 text-center text-xs text-neutral-500">Lines Background — Grade perspectiva</p>
+            <p className="mt-2 text-center text-xs text-neutral-500">Lines Background — Grade perspectiva</p>
           </div>
-        </div>
-        <div className="mt-6 overflow-hidden rounded-xl border border-white/5 bg-neutral-950 p-4">
-          <Image
-            src={assetUrl("/brand/grafismo/ticker-shapes.png")}
-            alt="Ticker Shapes"
-            width={4189}
-            height={231}
-            className="w-full"
-            style={{ width: "100%", height: "auto" }}
-            unoptimized
-          />
-          <p className="mt-3 text-center text-xs text-neutral-500">Ticker Shapes — Formas geometricas em sequencia</p>
+          <div className="overflow-hidden rounded-xl border border-white/5 bg-neutral-950 p-4">
+            <Image
+              src={assetUrl("/brand/grafismo/ticker-shapes.png")}
+              alt="Ticker Shapes"
+              width={4189}
+              height={231}
+              className="w-full"
+              style={{ width: "100%", height: "auto" }}
+              unoptimized
+            />
+            <p className="mt-2 text-center text-xs text-neutral-500">Ticker Shapes — Formas geometricas</p>
+          </div>
         </div>
       </SubSection>
 
       {/* ══ Backgrounds ══ */}
       <SubSection title="Backgrounds">
         <p className="mb-6 text-sm text-neutral-400">
-          Composicoes de fundo oficiais — dark mode com efeitos de iluminacao vermelha.
+          Composicoes de fundo oficiais — dark mode com grafismos e iluminacao vermelha.
         </p>
-        <div className="grid gap-6 md:grid-cols-2">
+        <div className="grid gap-4 md:grid-cols-2">
           <div className="overflow-hidden rounded-xl border border-white/5">
             <Image
               src={assetUrl("/brand/bg/banner-section2.png")}
@@ -212,74 +290,52 @@ export function ApplicationsSection() {
               unoptimized
             />
             <div className="bg-neutral-900 px-4 py-3">
-              <p className="text-sm font-medium text-neutral-200">Banner Section 2 — LP</p>
+              <p className="text-xs font-medium text-neutral-300">Banner Section 2 — LP</p>
             </div>
           </div>
           <div className="overflow-hidden rounded-xl border border-white/5">
             <Image
               src={assetUrl("/brand/bg/bg-dark-composition.png")}
-              alt="Background Dark Composition"
+              alt="Bg Dark Composition"
               width={2160}
               height={2700}
               className="w-full"
-              style={{ width: "100%", height: "auto", maxHeight: 400, objectFit: "cover", objectPosition: "top" }}
+              style={{ width: "100%", height: "auto", maxHeight: 360, objectFit: "cover", objectPosition: "top" }}
               unoptimized
             />
             <div className="bg-neutral-900 px-4 py-3">
-              <p className="text-sm font-medium text-neutral-200">Bg Dark — Composicao com grafismos</p>
+              <p className="text-xs font-medium text-neutral-300">Bg Dark — Composicao</p>
             </div>
           </div>
         </div>
-        <div className="mt-6 grid gap-6 md:grid-cols-3">
-          <div className="overflow-hidden rounded-xl border border-white/5">
-            <Image
-              src={assetUrl("/brand/bg/bg-dark.png")}
-              alt="Background Dark"
-              width={2160}
-              height={2700}
-              className="w-full"
-              style={{ width: "100%", height: "auto", maxHeight: 280, objectFit: "cover", objectPosition: "top" }}
-              unoptimized
-            />
-            <div className="bg-neutral-900 px-4 py-3">
-              <p className="text-xs font-medium text-neutral-300">Bg Dark</p>
+        <div className="mt-4 grid gap-4 md:grid-cols-3">
+          {[
+            { src: "/brand/bg/bg-dark.png", label: "Bg Dark" },
+            { src: "/brand/bg/bg-manual.png", label: "Bg Manual" },
+            { src: "/brand/social/bg-post.png", label: "Bg Post" },
+          ].map((bg) => (
+            <div key={bg.label} className="overflow-hidden rounded-xl border border-white/5">
+              <Image
+                src={assetUrl(bg.src)}
+                alt={bg.label}
+                width={2160}
+                height={2700}
+                className="w-full"
+                style={{ width: "100%", height: "auto", maxHeight: 240, objectFit: "cover", objectPosition: "top" }}
+                unoptimized
+              />
+              <div className="bg-neutral-900 px-4 py-3">
+                <p className="text-xs font-medium text-neutral-300">{bg.label}</p>
+              </div>
             </div>
-          </div>
-          <div className="overflow-hidden rounded-xl border border-white/5">
-            <Image
-              src={assetUrl("/brand/bg/bg-manual.png")}
-              alt="Background Manual"
-              width={3840}
-              height={2160}
-              className="w-full"
-              style={{ width: "100%", height: "auto", maxHeight: 280, objectFit: "cover" }}
-              unoptimized
-            />
-            <div className="bg-neutral-900 px-4 py-3">
-              <p className="text-xs font-medium text-neutral-300">Bg Manual</p>
-            </div>
-          </div>
-          <div className="overflow-hidden rounded-xl border border-white/5">
-            <Image
-              src={assetUrl("/brand/social/bg-post.png")}
-              alt="Background Post"
-              width={2160}
-              height={2700}
-              className="w-full"
-              style={{ width: "100%", height: "auto", maxHeight: 280, objectFit: "cover", objectPosition: "top" }}
-              unoptimized
-            />
-            <div className="bg-neutral-900 px-4 py-3">
-              <p className="text-xs font-medium text-neutral-300">Bg Post</p>
-            </div>
-          </div>
+          ))}
         </div>
       </SubSection>
 
       {/* ══ Presenca Digital ══ */}
-      <SubSection title="Presenca Digital — Redes Sociais">
+      <SubSection title="Presenca Digital — Mockups">
         <p className="mb-6 text-sm text-neutral-400">
-          Templates e mockups para redes sociais — posts, stories e materiais digitais.
+          Mockups e templates de presenca digital para redes sociais.
         </p>
         <div className="overflow-hidden rounded-xl border border-white/5">
           <Image
