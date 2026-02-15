@@ -57,8 +57,8 @@ function SignatureCard({
 }) {
   return (
     <div className="overflow-hidden rounded-xl border border-neutral-700/30 transition-all hover:border-neutral-600/50">
-      {/* Preview — fundo branco simulando caixa de email */}
-      <div className="border-b border-neutral-200 bg-white px-8 py-8">
+      {/* Preview — fundo neutro claro simulando corpo do email */}
+      <div className="bg-neutral-100 px-8 py-8">
         <div dangerouslySetInnerHTML={{ __html: html }} />
       </div>
 
@@ -71,7 +71,7 @@ function SignatureCard({
               Gmail
             </span>
             <span className="inline-block rounded-md bg-neutral-800 px-2 py-0.5 font-mono text-[10px] text-neutral-500">
-              480px
+              520px
             </span>
           </div>
           <p className="text-[11px] text-neutral-500">{templateDescription}</p>
@@ -88,7 +88,7 @@ export function EmailSignaturesSection() {
   return (
     <section id="assinaturas" className="mx-auto max-w-[1400px] px-8 py-20">
       <SectionLabel>COMUNICACAO</SectionLabel>
-      <SectionTitle sub="Assinaturas de email com identidade visual KTANA — todos os links clicaveis (telefone, email, site), HTML puro compativel com Gmail">
+      <SectionTitle sub="Assinaturas dark com Samurai 3D, accent vermelho e links clicaveis — HTML puro compativel com Gmail, prontas para copiar e colar">
         Assinaturas de Email
       </SectionTitle>
 
@@ -127,8 +127,9 @@ export function EmailSignaturesSection() {
         <div className="grid grid-cols-2 gap-x-8 gap-y-0 sm:grid-cols-3">
           {[
             { token: "accent", value: KTANA_SIGNATURE.accent },
-            { token: "text-primary", value: KTANA_SIGNATURE.textPrimary },
-            { token: "text-secondary", value: KTANA_SIGNATURE.textSecondary },
+            { token: "bg", value: KTANA_SIGNATURE.bg },
+            { token: "text-white", value: KTANA_SIGNATURE.textWhite },
+            { token: "text-light", value: KTANA_SIGNATURE.textLight },
             { token: "text-muted", value: KTANA_SIGNATURE.textMuted },
             { token: "divider", value: KTANA_SIGNATURE.divider },
           ].map((row) => (

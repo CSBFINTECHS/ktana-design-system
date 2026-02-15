@@ -1,4 +1,5 @@
 /* ─── Email Signature Templates — KTANA ─── */
+/* Dark theme + Samurai 3D + Red accent = High impact branding */
 
 export interface SignatureFields {
   nome: string;
@@ -7,19 +8,22 @@ export interface SignatureFields {
   telefoneLink: string;
 }
 
+const BASE = "https://ktana-design-system.vercel.app/designsystem";
+
 export const KTANA_SIGNATURE = {
   accent: "#FF3317",
-  textPrimary: "#141414",
-  textSecondary: "#575757",
-  textMuted: "#999999",
-  divider: "#E5E5E5",
-  bgSubtle: "#F8F8F8",
-  logoHorizontal:
-    "https://ktana-design-system.vercel.app/designsystem/brand/logo-horizontal/dark.svg",
-  symbol:
-    "https://ktana-design-system.vercel.app/designsystem/brand/symbol/dark.svg",
-  logoReduzido:
-    "https://ktana-design-system.vercel.app/designsystem/brand/logo-reduzido/dark.svg",
+  bg: "#0A0A0A",
+  bgCard: "#111111",
+  textWhite: "#FFFFFF",
+  textLight: "#E0E0E0",
+  textMuted: "#888888",
+  divider: "#222222",
+  logoLight: `${BASE}/brand/logo-horizontal/light.svg`,
+  symbolLight: `${BASE}/brand/symbol/light.svg`,
+  logoReduzidoLight: `${BASE}/brand/logo-reduzido/light.svg`,
+  samuraiNeon: `${BASE}/brand/character/samurai-neon.png`,
+  samuraiHolographic: `${BASE}/brand/character/samurai-holographic.png`,
+  samuraiMain: `${BASE}/brand/character/samurai-main.png`,
   site: "ktana.ai",
   siteUrl: "https://ktana.ai",
   email: "contato@ktana.ai",
@@ -32,101 +36,56 @@ export const DEFAULT_FIELDS: SignatureFields = {
   telefoneLink: "+5511999999999",
 };
 
-/* ─── Variante 1: Executive ─── */
+/* ─── Variante 1: HERO — Samurai Neon + dados lado a lado ─── */
 
-export function generateExecutiveSignature(fields: SignatureFields): string {
+export function generateHeroSignature(fields: SignatureFields): string {
   const b = KTANA_SIGNATURE;
-  return `<table cellpadding="0" cellspacing="0" border="0" style="font-family:Arial,Helvetica,sans-serif;max-width:480px;border-collapse:collapse;">
+  return `<table cellpadding="0" cellspacing="0" border="0" style="font-family:Arial,Helvetica,sans-serif;max-width:520px;border-collapse:collapse;">
   <tr>
-    <td style="padding:0 0 16px 0;">
-      <table cellpadding="0" cellspacing="0" border="0">
+    <td style="background-color:${b.bg};border-radius:12px;overflow:hidden;" colspan="3">
+      <table cellpadding="0" cellspacing="0" border="0" width="100%" style="border-collapse:collapse;">
         <tr>
-          <td style="font-size:18px;font-weight:700;color:${b.textPrimary};font-family:Arial,Helvetica,sans-serif;line-height:1.2;letter-spacing:-0.3px;">
-            ${fields.nome}
+          <td style="vertical-align:bottom;width:140px;background-color:${b.bg};" width="140">
+            <img src="${b.samuraiNeon}" alt="" width="140" style="display:block;width:140px;height:auto;border:0;" />
+          </td>
+          <td style="vertical-align:top;padding:28px 28px 28px 20px;background-color:${b.bg};">
+            <table cellpadding="0" cellspacing="0" border="0" style="border-collapse:collapse;">
+              <tr>
+                <td style="font-size:20px;font-weight:700;color:${b.textWhite};font-family:Arial,Helvetica,sans-serif;line-height:1.1;letter-spacing:-0.5px;padding:0 0 2px 0;">
+                  ${fields.nome}
+                </td>
+              </tr>
+              <tr>
+                <td style="font-size:11px;color:${b.accent};font-family:Arial,Helvetica,sans-serif;padding:0 0 16px 0;letter-spacing:1.5px;text-transform:uppercase;font-weight:600;">
+                  ${fields.cargo}
+                </td>
+              </tr>
+              <tr>
+                <td style="padding:0 0 16px 0;">
+                  <table cellpadding="0" cellspacing="0" border="0" width="40">
+                    <tr><td style="border-top:2px solid ${b.accent};font-size:0;line-height:0;" height="1">&nbsp;</td></tr>
+                  </table>
+                </td>
+              </tr>
+              <tr>
+                <td style="font-size:12px;color:${b.textMuted};font-family:Arial,Helvetica,sans-serif;line-height:2.2;">
+                  <a href="mailto:${b.email}" style="color:${b.textLight};text-decoration:none;font-weight:600;">${b.email}</a><br/>
+                  <a href="tel:${fields.telefoneLink}" style="color:${b.textMuted};text-decoration:none;">${fields.telefone}</a><br/>
+                  <a href="${b.siteUrl}" style="color:${b.textMuted};text-decoration:none;">${b.site}</a>
+                </td>
+              </tr>
+            </table>
           </td>
         </tr>
         <tr>
-          <td style="font-size:13px;color:${b.textSecondary};font-family:Arial,Helvetica,sans-serif;padding:4px 0 0 0;letter-spacing:0.2px;">
-            ${fields.cargo}
-          </td>
-        </tr>
-      </table>
-    </td>
-  </tr>
-  <tr>
-    <td style="padding:0 0 16px 0;">
-      <table cellpadding="0" cellspacing="0" border="0" width="80">
-        <tr><td style="border-top:2px solid ${b.accent};font-size:0;line-height:0;" height="1">&nbsp;</td></tr>
-      </table>
-    </td>
-  </tr>
-  <tr>
-    <td style="padding:0 0 4px 0;">
-      <table cellpadding="0" cellspacing="0" border="0">
-        <tr>
-          <td style="font-size:12px;color:${b.textSecondary};font-family:Arial,Helvetica,sans-serif;line-height:1;">
-            <a href="tel:${fields.telefoneLink}" style="color:${b.textSecondary};text-decoration:none;">${fields.telefone}</a>
-          </td>
-        </tr>
-      </table>
-    </td>
-  </tr>
-  <tr>
-    <td style="padding:0 0 4px 0;">
-      <table cellpadding="0" cellspacing="0" border="0">
-        <tr>
-          <td style="font-size:12px;font-family:Arial,Helvetica,sans-serif;line-height:1;">
-            <a href="mailto:${b.email}" style="color:${b.textPrimary};text-decoration:none;font-weight:600;">${b.email}</a>
-          </td>
-        </tr>
-      </table>
-    </td>
-  </tr>
-  <tr>
-    <td style="padding:0 0 20px 0;">
-      <table cellpadding="0" cellspacing="0" border="0">
-        <tr>
-          <td style="font-size:12px;font-family:Arial,Helvetica,sans-serif;line-height:1;">
-            <a href="${b.siteUrl}" style="color:${b.textSecondary};text-decoration:none;">${b.site}</a>
-          </td>
-        </tr>
-      </table>
-    </td>
-  </tr>
-  <tr>
-    <td style="border-top:1px solid ${b.divider};padding:16px 0 0 0;">
-      <img src="${b.logoHorizontal}" alt="KTANA" height="28" style="display:block;height:28px;border:0;" />
-    </td>
-  </tr>
-</table>`;
-}
-
-/* ─── Variante 2: Sidebar ─── */
-
-export function generateSidebarSignature(fields: SignatureFields): string {
-  const b = KTANA_SIGNATURE;
-  return `<table cellpadding="0" cellspacing="0" border="0" style="font-family:Arial,Helvetica,sans-serif;max-width:480px;border-collapse:collapse;">
-  <tr>
-    <td style="vertical-align:top;padding-right:20px;border-right:2px solid ${b.accent};" width="48">
-      <img src="${b.symbol}" alt="KTANA" width="40" height="40" style="display:block;width:40px;height:40px;border:0;" />
-    </td>
-    <td style="vertical-align:top;padding-left:20px;">
-      <table cellpadding="0" cellspacing="0" border="0">
-        <tr>
-          <td style="font-size:16px;font-weight:700;color:${b.textPrimary};font-family:Arial,Helvetica,sans-serif;line-height:1.2;letter-spacing:-0.2px;padding:0 0 2px 0;">
-            ${fields.nome}
-          </td>
-        </tr>
-        <tr>
-          <td style="font-size:12px;color:${b.textSecondary};font-family:Arial,Helvetica,sans-serif;padding:0 0 14px 0;letter-spacing:0.3px;">
-            ${fields.cargo}
-          </td>
-        </tr>
-        <tr>
-          <td style="font-size:12px;color:${b.textSecondary};font-family:Arial,Helvetica,sans-serif;line-height:2;">
-            <a href="tel:${fields.telefoneLink}" style="color:${b.textSecondary};text-decoration:none;">${fields.telefone}</a><br/>
-            <a href="mailto:${b.email}" style="color:${b.textPrimary};text-decoration:none;font-weight:600;">${b.email}</a><br/>
-            <a href="${b.siteUrl}" style="color:${b.textSecondary};text-decoration:none;">${b.site}</a>
+          <td colspan="2" style="padding:0 28px 20px 28px;background-color:${b.bg};">
+            <table cellpadding="0" cellspacing="0" border="0" width="100%" style="border-collapse:collapse;">
+              <tr>
+                <td style="border-top:1px solid ${b.divider};padding:16px 0 0 0;">
+                  <img src="${b.logoLight}" alt="KTANA" height="20" style="display:block;height:20px;border:0;" />
+                </td>
+              </tr>
+            </table>
           </td>
         </tr>
       </table>
@@ -135,26 +94,83 @@ export function generateSidebarSignature(fields: SignatureFields): string {
 </table>`;
 }
 
-/* ─── Variante 3: Minimal ─── */
+/* ─── Variante 2: BLADE — Banner horizontal, samurai no canto direito ─── */
 
-export function generateMinimalSignature(fields: SignatureFields): string {
+export function generateBladeSignature(fields: SignatureFields): string {
   const b = KTANA_SIGNATURE;
-  return `<table cellpadding="0" cellspacing="0" border="0" style="font-family:Arial,Helvetica,sans-serif;max-width:480px;border-collapse:collapse;">
+  return `<table cellpadding="0" cellspacing="0" border="0" style="font-family:Arial,Helvetica,sans-serif;max-width:520px;border-collapse:collapse;">
   <tr>
-    <td style="padding:0 0 12px 0;">
-      <span style="font-size:14px;font-weight:700;color:${b.textPrimary};letter-spacing:-0.2px;">${fields.nome}</span><span style="font-size:13px;color:${b.textMuted};font-weight:400;">&nbsp;&nbsp;&middot;&nbsp;&nbsp;${fields.cargo}</span>
-    </td>
-  </tr>
-  <tr>
-    <td style="padding:0 0 12px 0;">
-      <table cellpadding="0" cellspacing="0" border="0" width="40">
-        <tr><td style="border-top:2px solid ${b.accent};font-size:0;line-height:0;" height="1">&nbsp;</td></tr>
+    <td style="background-color:${b.bg};border-radius:12px;overflow:hidden;">
+      <table cellpadding="0" cellspacing="0" border="0" width="100%" style="border-collapse:collapse;">
+        <tr>
+          <td colspan="2" style="background-color:${b.accent};font-size:0;line-height:0;height:3px;" height="3">&nbsp;</td>
+        </tr>
+        <tr>
+          <td style="vertical-align:top;padding:24px 0 24px 28px;">
+            <table cellpadding="0" cellspacing="0" border="0" style="border-collapse:collapse;">
+              <tr>
+                <td style="padding:0 0 14px 0;">
+                  <img src="${b.logoLight}" alt="KTANA" height="18" style="display:block;height:18px;border:0;" />
+                </td>
+              </tr>
+              <tr>
+                <td style="font-size:18px;font-weight:700;color:${b.textWhite};font-family:Arial,Helvetica,sans-serif;line-height:1.15;letter-spacing:-0.4px;padding:0 0 2px 0;">
+                  ${fields.nome}
+                </td>
+              </tr>
+              <tr>
+                <td style="font-size:11px;color:${b.accent};font-family:Arial,Helvetica,sans-serif;padding:0 0 16px 0;letter-spacing:1px;text-transform:uppercase;font-weight:600;">
+                  ${fields.cargo}
+                </td>
+              </tr>
+              <tr>
+                <td style="font-size:11px;color:${b.textMuted};font-family:Arial,Helvetica,sans-serif;line-height:1;">
+                  <a href="mailto:${b.email}" style="color:${b.textLight};text-decoration:none;font-weight:600;">${b.email}</a><span style="color:#333;">&nbsp;&nbsp;&middot;&nbsp;&nbsp;</span><a href="tel:${fields.telefoneLink}" style="color:${b.textMuted};text-decoration:none;">${fields.telefone}</a><span style="color:#333;">&nbsp;&nbsp;&middot;&nbsp;&nbsp;</span><a href="${b.siteUrl}" style="color:${b.textMuted};text-decoration:none;">${b.site}</a>
+                </td>
+              </tr>
+            </table>
+          </td>
+          <td style="vertical-align:bottom;width:120px;text-align:right;" width="120">
+            <img src="${b.samuraiHolographic}" alt="" width="120" style="display:block;width:120px;height:auto;border:0;" />
+          </td>
+        </tr>
       </table>
     </td>
   </tr>
+</table>`;
+}
+
+/* ─── Variante 3: GHOST — Dark minimal com symbol ─── */
+
+export function generateGhostSignature(fields: SignatureFields): string {
+  const b = KTANA_SIGNATURE;
+  return `<table cellpadding="0" cellspacing="0" border="0" style="font-family:Arial,Helvetica,sans-serif;max-width:520px;border-collapse:collapse;">
   <tr>
-    <td style="font-size:12px;font-family:Arial,Helvetica,sans-serif;line-height:1;color:${b.textSecondary};">
-      <a href="mailto:${b.email}" style="color:${b.textPrimary};text-decoration:none;font-weight:600;">${b.email}</a><span style="color:${b.textMuted};">&nbsp;&nbsp;&middot;&nbsp;&nbsp;</span><a href="tel:${fields.telefoneLink}" style="color:${b.textSecondary};text-decoration:none;">${fields.telefone}</a><span style="color:${b.textMuted};">&nbsp;&nbsp;&middot;&nbsp;&nbsp;</span><a href="${b.siteUrl}" style="color:${b.textSecondary};text-decoration:none;">${b.site}</a>
+    <td style="background-color:${b.bg};border-radius:12px;padding:24px 28px;overflow:hidden;">
+      <table cellpadding="0" cellspacing="0" border="0" style="border-collapse:collapse;">
+        <tr>
+          <td style="padding:0 0 14px 0;">
+            <img src="${b.symbolLight}" alt="KTANA" width="28" height="28" style="display:block;width:28px;height:28px;border:0;" />
+          </td>
+        </tr>
+        <tr>
+          <td style="padding:0 0 3px 0;">
+            <span style="font-size:15px;font-weight:700;color:${b.textWhite};letter-spacing:-0.3px;">${fields.nome}</span><span style="font-size:12px;color:${b.textMuted};font-weight:400;">&nbsp;&nbsp;&middot;&nbsp;&nbsp;${fields.cargo}</span>
+          </td>
+        </tr>
+        <tr>
+          <td style="padding:10px 0 12px 0;">
+            <table cellpadding="0" cellspacing="0" border="0" width="32">
+              <tr><td style="border-top:2px solid ${b.accent};font-size:0;line-height:0;" height="1">&nbsp;</td></tr>
+            </table>
+          </td>
+        </tr>
+        <tr>
+          <td style="font-size:11px;font-family:Arial,Helvetica,sans-serif;line-height:1;color:${b.textMuted};">
+            <a href="mailto:${b.email}" style="color:${b.textLight};text-decoration:none;font-weight:600;">${b.email}</a><span style="color:#333;">&nbsp;&nbsp;&middot;&nbsp;&nbsp;</span><a href="tel:${fields.telefoneLink}" style="color:${b.textMuted};text-decoration:none;">${fields.telefone}</a><span style="color:#333;">&nbsp;&nbsp;&middot;&nbsp;&nbsp;</span><a href="${b.siteUrl}" style="color:${b.textMuted};text-decoration:none;">${b.site}</a>
+          </td>
+        </tr>
+      </table>
     </td>
   </tr>
 </table>`;
@@ -171,21 +187,21 @@ export interface SignatureTemplate {
 
 export const SIGNATURE_TEMPLATES: SignatureTemplate[] = [
   {
-    id: "executive",
-    label: "Executive",
-    description: "Layout vertical premium com hierarquia forte e accent bar",
-    generate: generateExecutiveSignature,
+    id: "hero",
+    label: "Hero",
+    description: "Samurai 3D Neon + dados — maximo impacto visual",
+    generate: generateHeroSignature,
   },
   {
-    id: "sidebar",
-    label: "Sidebar",
-    description: "Symbol com barra lateral accent e dados alinhados",
-    generate: generateSidebarSignature,
+    id: "blade",
+    label: "Blade",
+    description: "Banner dark com barra vermelha + samurai holografico lateral",
+    generate: generateBladeSignature,
   },
   {
-    id: "minimal",
-    label: "Minimal",
-    description: "Uma linha de identidade + contatos separados por ponto",
-    generate: generateMinimalSignature,
+    id: "ghost",
+    label: "Ghost",
+    description: "Dark minimal — symbol + accent vermelho + dados em linha",
+    generate: generateGhostSignature,
   },
 ];
