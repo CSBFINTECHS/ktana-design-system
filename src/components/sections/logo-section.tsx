@@ -276,7 +276,7 @@ export function LogoSection() {
             unoptimized
           />
         </div>
-        <div className="mt-4 grid grid-cols-3 gap-4">
+        <div className="mt-4 grid grid-cols-2 gap-4 md:grid-cols-4">
           <div className="overflow-hidden rounded-xl bg-neutral-900">
             <Image
               src={assetUrl("/brand/character/samurai-neon.png")}
@@ -305,6 +305,17 @@ export function LogoSection() {
               alt="Samurai Holographic"
               width={948}
               height={1128}
+              className="w-full"
+              style={{ width: "100%", height: "auto" }}
+              unoptimized
+            />
+          </div>
+          <div className="overflow-hidden rounded-xl bg-neutral-900">
+            <Image
+              src={assetUrl("/brand/character/ktana-cyberpunk.jpg")}
+              alt="KTANA Cyberpunk"
+              width={1600}
+              height={1600}
               className="w-full"
               style={{ width: "100%", height: "auto" }}
               unoptimized

@@ -9,6 +9,7 @@ const CHARACTER_RENDERS = [
   { src: "/brand/character/samurai-main.png", label: "Main", w: 948, h: 1128 },
   { src: "/brand/character/samurai-kasa.png", label: "Kasa", w: 948, h: 1128 },
   { src: "/brand/character/samurai-attack.png", label: "Attack", w: 948, h: 1477 },
+  { src: "/brand/character/ktana-cyberpunk.jpg", label: "Cyberpunk", w: 1600, h: 1600 },
 ] as const;
 
 const GRAFISMOS = [
