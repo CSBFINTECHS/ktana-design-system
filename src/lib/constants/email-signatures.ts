@@ -27,8 +27,6 @@ export const KTANA_SIGNATURE = {
   symbolLight: `${BASE}/brand/symbol/light.svg`,
   logoReduzidoLight: `${BASE}/brand/logo-reduzido/light.svg`,
   charCyberpunk: `${BASE}/brand/character/ktana-cyberpunk.jpg`,
-  charNeon: `${BASE}/brand/character/samurai-neon.png`,
-  charHolographic: `${BASE}/brand/character/samurai-holographic.png`,
   iconLinkedin: `${BASE}/brand/social-icons/linkedin.svg`,
   iconInstagram: `${BASE}/brand/social-icons/instagram.svg`,
   iconYoutube: `${BASE}/brand/social-icons/youtube.svg`,
@@ -184,7 +182,7 @@ export function generateHeroSignature(fields: SignatureFields): string {
 </table>`;
 }
 
-/* ─── Variante 2: BLADE — Samurai Neon circular + barra vermelha + social icons + disclaimer ─── */
+/* ─── Variante 2: BLADE — Cyberpunk circular + barra vermelha + social icons + disclaimer ─── */
 
 export function generateBladeSignature(fields: SignatureFields): string {
   const b = KTANA_SIGNATURE;
@@ -197,7 +195,7 @@ export function generateBladeSignature(fields: SignatureFields): string {
         </tr>
         <tr>
           <td style="vertical-align:middle;width:72px;padding:20px 0 20px 24px;" width="72">
-            <img src="${b.charNeon}" alt="" width="56" height="56" style="display:block;width:56px;height:56px;border-radius:50%;object-fit:cover;border:2px solid ${b.divider};" />
+            <img src="${b.charCyberpunk}" alt="" width="56" height="56" style="display:block;width:56px;height:56px;border-radius:50%;object-fit:cover;border:2px solid ${b.divider};" />
           </td>
           <td style="vertical-align:middle;padding:20px 24px 20px 16px;">
             <table cellpadding="0" cellspacing="0" border="0" style="border-collapse:collapse;">
@@ -263,7 +261,7 @@ export function generateBladeSignature(fields: SignatureFields): string {
 </table>`;
 }
 
-/* ─── Variante 3: GHOST — Dark minimal, Samurai Holographic micro + social icons + disclaimer ─── */
+/* ─── Variante 3: GHOST — Dark minimal, Cyberpunk micro + social icons + disclaimer ─── */
 
 export function generateGhostSignature(fields: SignatureFields): string {
   const b = KTANA_SIGNATURE;
@@ -273,7 +271,7 @@ export function generateGhostSignature(fields: SignatureFields): string {
       <table cellpadding="0" cellspacing="0" border="0" width="100%" style="border-collapse:collapse;">
         <tr>
           <td style="vertical-align:middle;padding:0 12px 0 0;" width="40">
-            <img src="${b.charHolographic}" alt="" width="36" height="36" style="display:block;width:36px;height:36px;border-radius:50%;object-fit:cover;border:1px solid ${b.divider};" />
+            <img src="${b.charCyberpunk}" alt="" width="36" height="36" style="display:block;width:36px;height:36px;border-radius:50%;object-fit:cover;border:1px solid ${b.divider};" />
           </td>
           <td style="vertical-align:middle;">
             <span style="font-size:14px;font-weight:700;color:${b.textWhite};letter-spacing:-0.2px;">${fields.nome}</span><span style="font-size:11px;color:${b.textMuted};font-weight:400;">&nbsp;&nbsp;&middot;&nbsp;&nbsp;${fields.cargo}</span>
@@ -351,13 +349,13 @@ export const SIGNATURE_TEMPLATES: SignatureTemplate[] = [
   {
     id: "blade",
     label: "Blade",
-    description: "Barra vermelha + Samurai Neon circular + social icons + disclaimer",
+    description: "Barra vermelha + Cyberpunk circular + social icons + disclaimer",
     generate: generateBladeSignature,
   },
   {
     id: "ghost",
     label: "Ghost",
-    description: "Dark minimal — Samurai Holographic micro + social icons + disclaimer",
+    description: "Dark minimal — Cyberpunk micro + social icons + disclaimer",
     generate: generateGhostSignature,
   },
 ];
