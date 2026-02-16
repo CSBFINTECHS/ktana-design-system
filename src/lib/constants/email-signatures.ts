@@ -8,6 +8,8 @@ export interface SignatureFields {
   telefoneLink: string;
   linkedin: string;
   instagram: string;
+  youtube: string;
+  tiktok: string;
 }
 
 const BASE = "https://ktana-design-system.vercel.app/designsystem";
@@ -29,7 +31,8 @@ export const KTANA_SIGNATURE = {
   charHolographic: `${BASE}/brand/character/samurai-holographic.png`,
   iconLinkedin: `${BASE}/brand/social-icons/linkedin.svg`,
   iconInstagram: `${BASE}/brand/social-icons/instagram.svg`,
-  iconGlobe: `${BASE}/brand/social-icons/globe.svg`,
+  iconYoutube: `${BASE}/brand/social-icons/youtube.svg`,
+  iconTiktok: `${BASE}/brand/social-icons/tiktok.svg`,
   site: "ktana.ai",
   siteUrl: "https://ktana.ai",
   email: "contato@ktana.ai",
@@ -44,6 +47,8 @@ export const DEFAULT_FIELDS: SignatureFields = {
   telefoneLink: "+5511999999999",
   linkedin: "https://linkedin.com/company/ktana",
   instagram: "https://instagram.com/ktana.ai",
+  youtube: "https://youtube.com/@ktana",
+  tiktok: "https://tiktok.com/@ktana",
 };
 
 /* ─── Bloco de contatos reutilizavel ─── */
@@ -65,14 +70,20 @@ function contactBlock(b: typeof KTANA_SIGNATURE, fields: SignatureFields): strin
 function socialBlock(b: typeof KTANA_SIGNATURE, fields: SignatureFields): string {
   return `<table cellpadding="0" cellspacing="0" border="0" style="border-collapse:collapse;">
         <tr>
-          <td style="padding:0 8px 0 0;">
+          <td style="padding:0 10px 0 0;">
             <a href="${fields.linkedin}" style="text-decoration:none;"><img src="${b.iconLinkedin}" alt="LinkedIn" width="18" height="18" style="display:block;width:18px;height:18px;border:0;" /></a>
           </td>
-          <td style="padding:0 8px 0 0;">
+          <td style="padding:0 10px 0 0;">
             <a href="${fields.instagram}" style="text-decoration:none;"><img src="${b.iconInstagram}" alt="Instagram" width="18" height="18" style="display:block;width:18px;height:18px;border:0;" /></a>
           </td>
+          <td style="padding:0 10px 0 0;">
+            <a href="${fields.youtube}" style="text-decoration:none;"><img src="${b.iconYoutube}" alt="YouTube" width="18" height="18" style="display:block;width:18px;height:18px;border:0;" /></a>
+          </td>
+          <td style="padding:0 10px 0 0;">
+            <a href="${fields.tiktok}" style="text-decoration:none;"><img src="${b.iconTiktok}" alt="TikTok" width="18" height="18" style="display:block;width:18px;height:18px;border:0;" /></a>
+          </td>
           <td style="padding:0;">
-            <a href="${b.siteUrl}" style="text-decoration:none;"><img src="${b.iconGlobe}" alt="Site" width="18" height="18" style="display:block;width:18px;height:18px;border:0;" /></a>
+            <a href="${b.siteUrl}" style="text-decoration:none;"><img src="${b.symbolLight}" alt="${b.site}" width="18" height="18" style="display:block;width:18px;height:18px;border:0;" /></a>
           </td>
         </tr>
       </table>`;
