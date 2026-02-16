@@ -1,5 +1,5 @@
 /* ─── Email Signature Templates — KTANA ─── */
-/* Dark + Character variations + Red accent + KV tagline + Social + Disclaimer */
+/* Dark + Character variations + Red accent + Social icons + Disclaimer */
 
 export interface SignatureFields {
   nome: string;
@@ -27,6 +27,9 @@ export const KTANA_SIGNATURE = {
   charCyberpunk: `${BASE}/brand/character/ktana-cyberpunk.jpg`,
   charNeon: `${BASE}/brand/character/samurai-neon.png`,
   charHolographic: `${BASE}/brand/character/samurai-holographic.png`,
+  iconLinkedin: `${BASE}/brand/social-icons/linkedin.svg`,
+  iconInstagram: `${BASE}/brand/social-icons/instagram.svg`,
+  iconGlobe: `${BASE}/brand/social-icons/globe.svg`,
   site: "ktana.ai",
   siteUrl: "https://ktana.ai",
   email: "contato@ktana.ai",
@@ -57,13 +60,19 @@ function contactBlock(b: typeof KTANA_SIGNATURE, fields: SignatureFields): strin
       </table>`;
 }
 
-/* ─── Bloco de redes sociais reutilizavel ─── */
+/* ─── Bloco de redes sociais com icones ─── */
 
 function socialBlock(b: typeof KTANA_SIGNATURE, fields: SignatureFields): string {
   return `<table cellpadding="0" cellspacing="0" border="0" style="border-collapse:collapse;">
         <tr>
-          <td style="font-size:10px;font-family:Arial,Helvetica,sans-serif;letter-spacing:0.5px;">
-            <a href="${fields.linkedin}" style="color:${b.accent};text-decoration:none;font-weight:700;">LinkedIn</a><span style="color:${b.divider};">&nbsp;&nbsp;&middot;&nbsp;&nbsp;</span><a href="${fields.instagram}" style="color:${b.accent};text-decoration:none;font-weight:700;">Instagram</a><span style="color:${b.divider};">&nbsp;&nbsp;&middot;&nbsp;&nbsp;</span><a href="${b.siteUrl}" style="color:${b.accent};text-decoration:none;font-weight:700;">Site</a>
+          <td style="padding:0 8px 0 0;">
+            <a href="${fields.linkedin}" style="text-decoration:none;"><img src="${b.iconLinkedin}" alt="LinkedIn" width="18" height="18" style="display:block;width:18px;height:18px;border:0;" /></a>
+          </td>
+          <td style="padding:0 8px 0 0;">
+            <a href="${fields.instagram}" style="text-decoration:none;"><img src="${b.iconInstagram}" alt="Instagram" width="18" height="18" style="display:block;width:18px;height:18px;border:0;" /></a>
+          </td>
+          <td style="padding:0;">
+            <a href="${b.siteUrl}" style="text-decoration:none;"><img src="${b.iconGlobe}" alt="Site" width="18" height="18" style="display:block;width:18px;height:18px;border:0;" /></a>
           </td>
         </tr>
       </table>`;
@@ -85,7 +94,7 @@ function disclaimerBlock(b: typeof KTANA_SIGNATURE): string {
         </tr>`;
 }
 
-/* ─── Variante 1: HERO — Cyberpunk AI close-up + dados + social + disclaimer ─── */
+/* ─── Variante 1: HERO — Cyberpunk AI close-up + dados + social icons + disclaimer ─── */
 
 export function generateHeroSignature(fields: SignatureFields): string {
   const b = KTANA_SIGNATURE;
@@ -164,7 +173,7 @@ export function generateHeroSignature(fields: SignatureFields): string {
 </table>`;
 }
 
-/* ─── Variante 2: BLADE — Samurai Neon circular + barra vermelha + social + disclaimer ─── */
+/* ─── Variante 2: BLADE — Samurai Neon circular + barra vermelha + social icons + disclaimer ─── */
 
 export function generateBladeSignature(fields: SignatureFields): string {
   const b = KTANA_SIGNATURE;
@@ -206,7 +215,7 @@ export function generateBladeSignature(fields: SignatureFields): string {
           </td>
         </tr>
         <tr>
-          <td colspan="2" style="padding:12px 24px 0 24px;">
+          <td colspan="2" style="padding:14px 24px 0 24px;">
             ${socialBlock(b, fields)}
           </td>
         </tr>
@@ -243,7 +252,7 @@ export function generateBladeSignature(fields: SignatureFields): string {
 </table>`;
 }
 
-/* ─── Variante 3: GHOST — Dark minimal, Samurai Holographic micro + social + disclaimer ─── */
+/* ─── Variante 3: GHOST — Dark minimal, Samurai Holographic micro + social icons + disclaimer ─── */
 
 export function generateGhostSignature(fields: SignatureFields): string {
   const b = KTANA_SIGNATURE;
@@ -275,7 +284,7 @@ export function generateGhostSignature(fields: SignatureFields): string {
           </td>
         </tr>
         <tr>
-          <td colspan="2" style="padding:12px 0 0 0;">
+          <td colspan="2" style="padding:14px 0 0 0;">
             ${socialBlock(b, fields)}
           </td>
         </tr>
@@ -325,19 +334,19 @@ export const SIGNATURE_TEMPLATES: SignatureTemplate[] = [
   {
     id: "hero",
     label: "Hero",
-    description: "Cyberpunk AI close-up + contatos + social + disclaimer",
+    description: "Cyberpunk AI close-up + contatos + social icons + disclaimer",
     generate: generateHeroSignature,
   },
   {
     id: "blade",
     label: "Blade",
-    description: "Barra vermelha + Samurai Neon circular + social + disclaimer",
+    description: "Barra vermelha + Samurai Neon circular + social icons + disclaimer",
     generate: generateBladeSignature,
   },
   {
     id: "ghost",
     label: "Ghost",
-    description: "Dark minimal — Samurai Holographic micro + social + disclaimer",
+    description: "Dark minimal — Samurai Holographic micro + social icons + disclaimer",
     generate: generateGhostSignature,
   },
 ];
