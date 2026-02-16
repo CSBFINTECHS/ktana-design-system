@@ -1,5 +1,5 @@
 /* ─── Email Signature Templates — KTANA ─── */
-/* Dark + Cyberpunk AI character + Red accent + "Grow As A Service" KV */
+/* Dark + Character variations + Red accent + KV tagline */
 
 export interface SignatureFields {
   nome: string;
@@ -22,12 +22,13 @@ export const KTANA_SIGNATURE = {
   logoLight: `${BASE}/brand/logo-horizontal/light.svg`,
   symbolLight: `${BASE}/brand/symbol/light.svg`,
   logoReduzidoLight: `${BASE}/brand/logo-reduzido/light.svg`,
-  cyberpunk: `${BASE}/brand/character/ktana-cyberpunk.jpg`,
+  charCyberpunk: `${BASE}/brand/character/ktana-cyberpunk.jpg`,
+  charNeon: `${BASE}/brand/character/samurai-neon.png`,
+  charHolographic: `${BASE}/brand/character/samurai-holographic.png`,
   site: "ktana.ai",
   siteUrl: "https://ktana.ai",
   email: "contato@ktana.ai",
-  tagline: "Grow As A Service",
-  kv: "Dados O Novo Petroleo",
+  tagline: "Grow As A Service \u2014 Dados O Novo Petroleo",
 } as const;
 
 export const DEFAULT_FIELDS: SignatureFields = {
@@ -37,7 +38,7 @@ export const DEFAULT_FIELDS: SignatureFields = {
   telefoneLink: "+5511999999999",
 };
 
-/* ─── Variante 1: HERO — Cyberpunk portrait + dados + tagline ─── */
+/* ─── Variante 1: HERO — Cyberpunk AI close-up + dados + tagline ─── */
 
 export function generateHeroSignature(fields: SignatureFields): string {
   const b = KTANA_SIGNATURE;
@@ -47,7 +48,7 @@ export function generateHeroSignature(fields: SignatureFields): string {
       <table cellpadding="0" cellspacing="0" border="0" width="100%" style="border-collapse:collapse;">
         <tr>
           <td style="vertical-align:top;width:130px;padding:0;background-color:${b.bg};" width="130">
-            <img src="${b.cyberpunk}" alt="" width="130" height="130" style="display:block;width:130px;height:130px;object-fit:cover;border:0;" />
+            <img src="${b.charCyberpunk}" alt="" width="130" height="130" style="display:block;width:130px;height:130px;object-fit:cover;border:0;" />
           </td>
           <td style="vertical-align:top;padding:20px 24px 20px 20px;background-color:${b.bg};">
             <table cellpadding="0" cellspacing="0" border="0" style="border-collapse:collapse;">
@@ -104,7 +105,7 @@ export function generateHeroSignature(fields: SignatureFields): string {
 </table>`;
 }
 
-/* ─── Variante 2: BLADE — Banner com cyberpunk circular + barra vermelha ─── */
+/* ─── Variante 2: BLADE — Samurai Neon circular + barra vermelha ─── */
 
 export function generateBladeSignature(fields: SignatureFields): string {
   const b = KTANA_SIGNATURE;
@@ -117,7 +118,7 @@ export function generateBladeSignature(fields: SignatureFields): string {
         </tr>
         <tr>
           <td style="vertical-align:middle;width:72px;padding:20px 0 20px 24px;" width="72">
-            <img src="${b.cyberpunk}" alt="" width="56" height="56" style="display:block;width:56px;height:56px;border-radius:50%;object-fit:cover;border:2px solid ${b.divider};" />
+            <img src="${b.charNeon}" alt="" width="56" height="56" style="display:block;width:56px;height:56px;border-radius:50%;object-fit:cover;border:2px solid ${b.divider};" />
           </td>
           <td style="vertical-align:middle;padding:20px 24px 20px 16px;">
             <table cellpadding="0" cellspacing="0" border="0" style="border-collapse:collapse;">
@@ -150,7 +151,7 @@ export function generateBladeSignature(fields: SignatureFields): string {
                         <img src="${b.logoLight}" alt="KTANA" height="16" style="display:inline-block;height:16px;border:0;vertical-align:middle;" />
                       </td>
                       <td style="vertical-align:middle;text-align:right;">
-                        <span style="font-size:8px;color:${b.textDark};font-family:Arial,Helvetica,sans-serif;letter-spacing:2px;text-transform:uppercase;font-weight:700;">${b.kv}</span>
+                        <span style="font-size:8px;color:${b.textDark};font-family:Arial,Helvetica,sans-serif;letter-spacing:2px;text-transform:uppercase;font-weight:700;">${b.tagline}</span>
                       </td>
                     </tr>
                   </table>
@@ -165,7 +166,7 @@ export function generateBladeSignature(fields: SignatureFields): string {
 </table>`;
 }
 
-/* ─── Variante 3: GHOST — Dark minimal, symbol + cyberpunk micro ─── */
+/* ─── Variante 3: GHOST — Dark minimal, Samurai Holographic micro ─── */
 
 export function generateGhostSignature(fields: SignatureFields): string {
   const b = KTANA_SIGNATURE;
@@ -175,7 +176,7 @@ export function generateGhostSignature(fields: SignatureFields): string {
       <table cellpadding="0" cellspacing="0" border="0" style="border-collapse:collapse;">
         <tr>
           <td style="vertical-align:middle;padding:0 12px 0 0;" width="40">
-            <img src="${b.cyberpunk}" alt="" width="36" height="36" style="display:block;width:36px;height:36px;border-radius:50%;object-fit:cover;border:1px solid ${b.divider};" />
+            <img src="${b.charHolographic}" alt="" width="36" height="36" style="display:block;width:36px;height:36px;border-radius:50%;object-fit:cover;border:1px solid ${b.divider};" />
           </td>
           <td style="vertical-align:middle;">
             <span style="font-size:14px;font-weight:700;color:${b.textWhite};letter-spacing:-0.2px;">${fields.nome}</span><span style="font-size:11px;color:${b.textMuted};font-weight:400;">&nbsp;&nbsp;&middot;&nbsp;&nbsp;${fields.cargo}</span>
@@ -232,19 +233,19 @@ export const SIGNATURE_TEMPLATES: SignatureTemplate[] = [
   {
     id: "hero",
     label: "Hero",
-    description: "Cyberpunk AI portrait + dados completos + Grow As A Service",
+    description: "Cyberpunk AI close-up + dados completos + tagline KV",
     generate: generateHeroSignature,
   },
   {
     id: "blade",
     label: "Blade",
-    description: "Barra vermelha + avatar circular + Dados O Novo Petroleo",
+    description: "Barra vermelha + Samurai Neon circular + tagline KV",
     generate: generateBladeSignature,
   },
   {
     id: "ghost",
     label: "Ghost",
-    description: "Dark minimal — avatar micro + accent vermelho + tagline",
+    description: "Dark minimal — Samurai Holographic micro + accent vermelho",
     generate: generateGhostSignature,
   },
 ];
